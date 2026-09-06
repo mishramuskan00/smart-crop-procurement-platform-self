@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="किसान सूचना एवं सेवा पोर्टल - SIH prototype">
+<title>होम | किसान सूचना एवं सेवा पोर्टल</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="utility">
+    <div class="container utility-inner">
+      <div><strong>भारत सरकार</strong> | Government of India</div>
+      <div class="utility-right">
+        <a href="#">स्क्रीन रीडर</a>
+        <a href="#">A-</a><a href="#">A</a><a href="#">A+</a>
+        <a href="#">हिंदी / English</a>
+      </div>
+    </div>
+  </div>
+  <div class="branding">
+    <div class="container branding-inner">
+      <a href="index.html"><img class="logo" src="assets/logo.png" alt="कृषि भारत लोगो"></a>
+      <div class="brand-divider"></div>
+      <div class="brand-copy">
+        <div class="tagline">हर किसान की बारी, सही समय की जानकारी</div>
+        <div class="department">किसान सूचना एवं सेवा पोर्टल</div>
+        <div class="department"><span>Ministry of Consumer Affairs, Food and Public Distribution</span></div>
+      </div>
+      <form class="search-box" id="siteSearch">
+        <input type="search" placeholder="Search Services" aria-label="Search Services">
+        <button type="submit" aria-label="Search">⌕</button>
+      </form>
+    </div>
+  </div>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+      <div class="nav-links"><a href="index.html" class="active">होम</a><a href="about.html" class="">हमारे बारे में</a><a href="services.html" class="">सेवाएँ</a><a href="dashboard.html" class="">डैशबोर्ड</a><a href="reports.html" class="">रिपोर्ट</a><a href="contact.html" class="">संपर्क करें</a>
+<a href="login.html" class="nav-login">Login</a><a href="registration.html" class="btn-outline nav-register">Register</a></div>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+<div class="container">
+  <div class="slider" aria-label="Multimedia slider">
+    <div class="slide active"><img src="assets/slides/slide1.svg" alt="किसान सूचना पोर्टल मुख्य बैनर"></div>
+    <div class="slide"><img src="assets/slides/slide2.svg" alt="महत्वपूर्ण किसान सूचना"></div>
+    <div class="slide"><img src="assets/slides/slide3.svg" alt="डिजिटल किसान सेवाएँ"></div>
+    <div class="slide">
+      <div class="slide-video">
+        <div class="video-card">
+          <button class="play" onclick="alert('अपना वीडियो assets/media/intro.mp4 नाम से जोड़ें।')">▶</button>
+          <h2>मल्टीमीडिया / वीडियो</h2>
+          <p>आप यहाँ सरकारी सूचना वीडियो, जागरूकता सामग्री या किसान प्रशिक्षण वीडियो जोड़ सकते हैं।</p>
+          <p><small>अपना MP4: <strong>assets/media/intro.mp4</strong></small></p>
+        </div>
+      </div>
+    </div>
+    <button class="slider-btn prev" aria-label="Previous slide">‹</button>
+    <button class="slider-btn next" aria-label="Next slide">›</button>
+    <div class="dots">
+      <button class="dot active" aria-label="Slide 1"></button>
+      <button class="dot" aria-label="Slide 2"></button>
+      <button class="dot" aria-label="Slide 3"></button>
+      <button class="dot" aria-label="Slide 4"></button>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="section-heading">
+    <h2>महत्वपूर्ण सेवाएँ</h2>
+    <p>किसानों के लिए उपयोगी डिजिटल सेवाएँ और जानकारी</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">▣</div><h3>योजनाएँ एवं लाभ</h3><p>सरकारी योजनाओं और पात्रता संबंधी जानकारी एक स्थान पर।</p><a class="link" href="services.html">और जानें →</a></div>
+    <div class="card"><div class="icon">☁</div><h3>मौसम सूचना</h3><p>कृषि कार्यों के लिए उपयोगी मौसम और चेतावनी अनुभाग।</p><a class="link" href="services.html">और जानें →</a></div>
+    <div class="card"><div class="icon">₹</div><h3>बाजार जानकारी</h3><p>फसल एवं बाजार से जुड़ी उपयोगी जानकारी के लिए समर्पित सेक्शन।</p><a class="link" href="services.html">और जानें →</a></div>
+    <div class="card"><div class="icon">✓</div><h3>आवेदन स्थिति</h3><p>अपने आवेदन या सेवा अनुरोध की स्थिति देखने के लिए डैशबोर्ड।</p><a class="link" href="dashboard.html">स्थिति देखें →</a></div>
+    <div class="card"><div class="icon">▤</div><h3>रिपोर्ट एवं दस्तावेज़</h3><p>सूचनाएँ, रिपोर्ट और मार्गदर्शिका आसानी से खोजें।</p><a class="link" href="reports.html">दस्तावेज़ देखें →</a></div>
+    <div class="card"><div class="icon">?</div><h3>सहायता</h3><p>सामान्य प्रश्न, संपर्क जानकारी और सहायता विकल्प।</p><a class="link" href="contact.html">सहायता लें →</a></div>
+  </div>
+  <div class="notice-strip">
+    <div class="notice"><strong>महत्वपूर्ण सूचना</strong><small>नई सरकारी सूचना और घोषणाएँ यहाँ प्रदर्शित की जा सकती हैं।</small></div>
+    <div class="notice"><strong>नवीनतम अपडेट</strong><small>पोर्टल की सेवाओं और सूचनाओं के अपडेट।</small></div>
+    <div class="notice"><strong>सहायता</strong><small>किसी सेवा के लिए सहायता चाहिए? संपर्क करें।</small></div>
+  </div>
+</div>
+</section>
+
+<section class="section alt">
+<div class="container">
+  <div class="section-heading"><h2>पोर्टल की झलक</h2><p>डेमो आँकड़े — वास्तविक SIH backend जुड़ने पर इन्हें live data से बदला जा सकता है।</p></div>
+  <div class="stats">
+    <div class="stat"><div class="num">24×7</div><p>डिजिटल उपलब्धता</p></div>
+    <div class="stat"><div class="num">06+</div><p>मुख्य सेवाएँ</p></div>
+    <div class="stat"><div class="num">03</div><p>सूचना श्रेणियाँ</p></div>
+    <div class="stat"><div class="num">100%</div><p>Responsive UI</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="info-banner">
+    <div><h2>अपनी सेवा का आवेदन और स्थिति एक ही स्थान पर देखें</h2><p style="margin:6px 0 0;color:#666">यह SIH prototype है — backend/API बाद में जोड़ा जा सकता है।</p></div>
+    <a class="btn" href="login.html">लॉगिन करें</a>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="कृषि भारत लोगो">
+        <div>
+          <strong>किसान सूचना एवं सेवा पोर्टल</strong><br>
+          <span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br>
+          <span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span>
+        </div>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>पोर्टल के बारे में</h3>
+          <a href="about.html">विजन और उद्देश्य</a>
+          <a href="about.html">हमारे बारे में</a>
+          <a href="reports.html">वार्षिक रिपोर्ट</a>
+          <a href="contact.html">संपर्क विवरण</a>
+        </div>
+        <div class="footer-col">
+          <h3>किसान सेवाएँ</h3>
+          <a href="services.html">योजनाएँ और लाभ</a>
+          <a href="services.html">बाजार जानकारी</a>
+          <a href="services.html">मौसम सूचना</a>
+          <a href="dashboard.html">आवेदन स्थिति</a>
+        </div>
+        <div class="footer-col">
+          <h3>दस्तावेज़</h3>
+          <a href="reports.html">मार्गदर्शिका</a>
+          <a href="reports.html">रिपोर्ट</a>
+          <a href="reports.html">सूचनाएँ</a>
+          <a href="#">वेबसाइट नीतियाँ</a>
+        </div>
+        <div class="footer-col">
+          <h3>त्वरित लिंक</h3>
+          <a href="services.html">सभी सेवाएँ</a>
+          <a href="contact.html">सहायता</a>
+          <a href="#">साइटमैप</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div>
+      <div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
