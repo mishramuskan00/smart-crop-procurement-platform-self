@@ -3,16 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="किसान सूचना एवं सेवा पोर्टल - SIH prototype">
-<title>डैशबोर्ड | किसान सूचना एवं सेवा पोर्टल</title>
+<meta name="description" content="किसान सूचना एवं सेवा पोर्टल - Farmer Dashboard">
+<title>किसान डैशबोर्ड | अपनी BAARI</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<<<<<<< HEAD
-<link rel="stylesheet" href="css/whatsapp-bot.css">
-=======
->>>>>>> 1c1333f0e82d5f6d609f4c7bf80c342c7faa9e81
+<style>
+  .pipeline-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+  .pipe-step { flex: 1; min-width: 120px; background: #f4f3fb; border: 1px solid #d9dbe7; border-radius: 8px; padding: 12px 8px; text-align: center; }
+  .pipe-step.active { background: #eaf5eb; border-color: #087f45; color: #087f45; font-weight: 700; }
+  .pipe-step.current { background: #fff5e9; border-color: #c44720; color: #c44720; font-weight: 800; }
+  .pipe-step small { display: block; font-size: 11px; opacity: 0.85; margin-top: 4px; }
+  .qr-box { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px; background: #fff; border: 1px dashed #cfd1dc; border-radius: 8px; }
+  @media print {
+    body * { visibility: hidden; }
+    #jFormModal, #jFormModal * { visibility: visible; }
+    #jFormModal { position: absolute; left: 0; top: 0; width: 100%; }
+  }
+</style>
 </head>
 <body>
 <header>
@@ -44,41 +53,249 @@
   <nav class="navbar">
     <div class="container nav-inner">
       <button class="menu-toggle" aria-label="Menu">☰</button>
-<<<<<<< HEAD
-      <div class="nav-links"><a href="index.html" class="">होम</a><a href="about.html" class="">हमारे बारे में</a><a href="services.html" class="">सेवाएँ</a><a href="procurement.html" class="">ई-उपार्जन</a><a href="dashboard.html" class="active">डैशबोर्ड</a><a href="reports.html" class="">रिपोर्ट</a><a href="contact.html" class="">संपर्क करें</a>
-<a href="login.html" class="nav-login">Login</a><a href="registration.html" class="btn-outline nav-register">Register</a></div>
-    </div>
-  </nav>
-<div class="price-ticker" id="latest-price-bar" role="region" aria-label="Latest MSP prices"><div class="price-ticker-track"><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong><strong>अपनी BAARI • किसान मूल्य सूचना</strong><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong></div></div>
-
-=======
-      <div class="nav-links"><a href="index.html" class="">होम</a><a href="about.html" class="">हमारे बारे में</a><a href="services.html" class="">सेवाएँ</a><a href="dashboard.html" class="active">डैशबोर्ड</a><a href="reports.html" class="">रिपोर्ट</a><a href="contact.html" class="">संपर्क करें</a>
-<a href="login.html" class="nav-login">Login</a><a href="registration.html" class="btn-outline nav-register">Register</a></div>
+      <div class="nav-links">
+        <a href="index.html">होम</a>
+        <a href="about.html">हमारे बारे में</a>
+        <a href="services.html">सेवाएँ</a>
+        <a href="dashboard.html" class="active">डैशबोर्ड</a>
+        <a href="reports.html">रिपोर्ट</a>
+        <a href="contact.html">संपर्क करें</a>
+        <span id="authActionLink" style="margin-left:auto;">
+          <a href="login.html" class="nav-login">Login</a>
+        </span>
+      </div>
     </div>
   </nav>
 >>>>>>> 1c1333f0e82d5f6d609f4c7bf80c342c7faa9e81
 </header>
 
-<section class="page-hero"><div class="container"><h1>डैशबोर्ड</h1><div class="breadcrumb">होम / डैशबोर्ड</div></div></section>
-<div class="container" style="margin-top:18px"><div style="display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:14px 18px;background:#fff7ed;border:1px solid #ead7bf;border-radius:8px"><div><strong>पोर्टल लॉगिन</strong><div style="font-size:14px;color:#666">किसान या सरकारी अधिकारी के लिए संबंधित लॉगिन चुनें।</div></div><a class="btn" href="login.html">लॉगिन विकल्प देखें →</a></div></div>
-<main class="content"><div class="container">
-<div class="stats">
-  <div class="stat"><div class="num">08</div><p>कुल आवेदन</p></div>
-  <div class="stat"><div class="num">05</div><p>पूर्ण</p></div>
-  <div class="stat"><div class="num">02</div><p>प्रक्रिया में</p></div>
-  <div class="stat"><div class="num">01</div><p>लंबित</p></div>
+<section class="page-hero">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
+    <div>
+      <h1>किसान डैशबोर्ड (Farmer Dashboard)</h1>
+      <div class="breadcrumb">होम / किसान डैशबोर्ड / <span id="farmerNameHero">लोड हो रहा है...</span></div>
+    </div>
+    <div id="kycBadgeContainer"></div>
+  </div>
+</section>
+
+<main class="content">
+  <div class="container">
+
+    <!-- Farmer Greeting & Profile Strip -->
+    <div class="info-banner" style="margin-bottom:24px;">
+      <div>
+        <h2 id="farmerGreeting">नमस्ते, किसान भाई!</h2>
+        <p style="margin:4px 0 0;color:#60646f" id="farmerMeta">पंजीकरण विवरण प्राप्त किया जा रहा है...</p>
+      </div>
+      <div>
+        <button class="btn btn-green" onclick="document.getElementById('bookingPanel').scrollIntoView({behavior:'smooth'})">+ नई बारी (स्लॉट) बुक करें</button>
+      </div>
+    </div>
+
+    <!-- Live Queue & Turn Status ("मेरी बारी कब आएगी?") -->
+    <div id="liveQueueSection" style="display:none;margin-bottom:24px;">
+      <div class="panel" style="border-left:5px solid var(--orange);background:#fffdfa;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+          <div>
+            <h2 style="margin:0;color:var(--navy);">🎯 आपकी बारी (Live Queue Status)</h2>
+            <p style="margin:4px 0 0;color:var(--muted)" id="queueCenterName">मंडी: लोड हो रहा है...</p>
+          </div>
+          <div id="queueBadge"></div>
+        </div>
+
+        <div class="stats" style="margin-top:18px;">
+          <div class="stat"><div class="num" id="statMyToken">—</div><p>आपका टोकन</p></div>
+          <div class="stat"><div class="num" id="statCurServing">—</div><p>वर्तमान टोकन (सेवा में)</p></div>
+          <div class="stat"><div class="num" id="statAhead">—</div><p>आपसे आगे किसान</p></div>
+          <div class="stat"><div class="num" id="statEwt">—</div><p>अनुमानित प्रतीक्षा समय (EWT)</p></div>
+        </div>
+
+        <!-- Six-Stage Procurement Pipeline -->
+        <h3 style="margin:20px 0 8px;">उपार्जन प्रगति (Six-Stage Procurement Pipeline)</h3>
+        <div class="pipeline-wrap" id="procurementPipeline">
+          <div class="pipe-step" id="stage1">1. स्लॉट आरक्षित<small>Booked</small></div>
+          <div class="pipe-step" id="stage2">2. मंडी आगमन<small>Gate Check-In</small></div>
+          <div class="pipe-step" id="stage3">3. सकल तौल<small>Gross Weight</small></div>
+          <div class="pipe-step" id="stage4">4. गुणवत्ता परीक्षण<small>Quality Check</small></div>
+          <div class="pipe-step" id="stage5">5. उतराई शेड<small>Unloading Bay</small></div>
+          <div class="pipe-step" id="stage6">6. जे-फॉर्म व डीबीटी<small>Final Weigh & Pay</small></div>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:16px;">
+          <button class="btn btn-green" id="btnGateCheckin" onclick="triggerGateCheckin()">📍 मंडी आगमन दर्ज करें (Gate Check-In)</button>
+          <label style="font-size:13px;color:#666;cursor:pointer;">
+            <input type="checkbox" id="demoGpsOverride" checked> डेमो मोड (2 किमी जियोफेंस ओवरराइड)
+          </label>
+          <button class="btn secondary" style="margin-left:auto;" onclick="openActiveTokenModal()">🎫 डिजिटल पास व QR देखें</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary KPI Statistics -->
+    <div class="stats" id="kpiStrip">
+      <div class="stat"><div class="num" id="kpiTotalApps">0</div><p>कुल आवेदन</p></div>
+      <div class="stat"><div class="num" id="kpiCompleted">0</div><p>पूर्ण उपार्जन</p></div>
+      <div class="stat"><div class="num" id="kpiTotalQty">0 Qtl</div><p>कुल बिका अनाज</p></div>
+      <div class="stat"><div class="num" id="kpiTotalAmount">₹0</div><p>कुल प्राप्त राशि</p></div>
+    </div>
+
+    <div class="two-col" style="margin-top:24px;">
+      <!-- Slot Booking Wizard ("अपनी बारी बुक करें") -->
+      <div class="panel" id="bookingPanel">
+        <h2>🌾 अपनी बारी बुक करें (Book Procurement Slot)</h2>
+        <p class="sub">अपनी फसल, मात्रा, नजदीकी उपार्जन केंद्र एवं अनुकूल समय स्लॉट चुनें।</p>
+
+        <form id="slotBookingForm" onsubmit="return handleSlotBooking(event);">
+          <div class="form-grid">
+            <div class="field full">
+              <label>उपार्जन केंद्र / मंडी चुनें <span class="req">*</span></label>
+              <select id="bookCenter" onchange="onCenterChange()" required>
+                <option value="">-- केंद्र लोड हो रहे हैं... --</option>
+              </select>
+              <span class="help" id="centerCongestionHelp">केंद्र चयन करने पर वर्तमान कतार एवं प्रतीक्षा समय प्रदर्शित होगा।</span>
+            </div>
+
+            <div class="field">
+              <label>फसल <span class="req">*</span></label>
+              <select id="bookCrop" required>
+                <option value="">-- फसल चुनें --</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>मात्रा (क्विंटल में) <span class="req">*</span></label>
+              <input type="number" id="bookQty" min="1" max="250" step="0.5" placeholder="जैसे 40" required>
+            </div>
+
+            <div class="field">
+              <label>वाहन प्रकार (Vehicle Type) <span class="req">*</span></label>
+              <select id="bookVehicle" required>
+                <option value="Tractor-Trolley">ट्रैक्टर-ट्रॉली (Tractor-Trolley)</option>
+                <option value="Mini-Truck">छोटा हाथी / पिकअप (Mini-Truck)</option>
+                <option value="Multi-Axle">बड़ा ट्रक (Multi-Axle Truck)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>उपार्जन तिथि <span class="req">*</span></label>
+              <input type="date" id="bookDate" required onchange="onDateChange()">
+            </div>
+
+            <div class="field full">
+              <label>समय स्लॉट (Time Window) <span class="req">*</span></label>
+              <select id="bookWindow" required>
+                <option value="MORNING">प्रातः स्लॉट (08:00 AM – 01:00 PM)</option>
+                <option value="AFTERNOON">दोपहर स्लॉट (01:00 PM – 06:00 PM)</option>
+              </select>
+              <small id="slotCapacityHint" style="color:#666;margin-top:4px;display:block;">चयनित स्लॉट उपलब्धता जांची जा रही है...</small>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;flex-wrap:wrap;gap:12px;">
+            <button type="button" class="btn secondary" onclick="getSmartRecommendation()">💡 स्मार्ट सिफारिश देखें (AI Recommendation)</button>
+            <button type="submit" class="btn btn-green" id="btnConfirmBooking">स्लॉट आरक्षित करें (Confirm Booking) ✓</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Active Digital Mandi Pass & Quick Actions -->
+      <aside class="panel">
+        <h2>🎫 सक्रिय डिजिटल टोकन</h2>
+        <div id="activeTokenCard">
+          <p style="color:#666;">वर्तमान में कोई सक्रिय बुकिंग नहीं है। बाईं ओर से अपनी बारी आरक्षित करें।</p>
+        </div>
+
+        <hr style="margin:20px 0;border:0;border-top:1px solid var(--border);">
+        <h3>मौसम एवं मंडी परामर्श</h3>
+        <div id="mandiWeatherBox" style="background:#f7f7fa;padding:14px;border-radius:8px;font-size:13.5px;">
+          मौसम विवरण लोड हो रहा है...
+        </div>
+      </aside>
+    </div>
+
+    <!-- Recent Applications & Procurements Table -->
+    <div class="panel" style="margin-top:24px">
+      <h2>हाल के आवेदन एवं उपार्जन रिकॉर्ड</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>टोकन / बुकिंग ID</th>
+              <th>उपार्जन केंद्र</th>
+              <th>फसल</th>
+              <th>मात्रा</th>
+              <th>तिथि व स्लॉट</th>
+              <th>स्थिति (Status)</th>
+              <th>कार्रवाई</th>
+            </tr>
+          </thead>
+          <tbody id="bookingsTableBody">
+            <tr><td colspan="7" style="text-align:center;color:#777">डेटा लोड हो रहा है...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Completed J-Forms & Payments Table -->
+    <div class="panel" style="margin-top:24px">
+      <h2>जारी जे-फॉर्म एवं डीबीटी भुगतान (J-Forms & DBT Payments)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>J-Form No</th>
+              <th>फसल</th>
+              <th>शुद्ध तौल (Qtls)</th>
+              <th>MSP भाव</th>
+              <th>देय राशि (₹)</th>
+              <th>भुगतान स्थिति</th>
+              <th>UTR संख्या</th>
+              <th>कार्रवाई</th>
+            </tr>
+          </thead>
+          <tbody id="jFormsTableBody">
+            <tr><td colspan="8" style="text-align:center;color:#777">डेटा लोड हो रहा है...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- J-Form Printable / View Modal -->
+<div id="jFormModal" class="modal-backdrop" style="display:none;position:fixed;inset:0;background:rgba(23,22,63,0.5);z-index:10000;align-items:center;justify-content:center;padding:15px;">
+  <div class="modal" style="background:#fff;max-width:700px;width:100%;border-radius:10px;padding:30px;position:relative;border:2px solid #17163f;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <button onclick="document.getElementById('jFormModal').style.display='none'" style="position:absolute;top:15px;right:20px;border:none;background:none;font-size:24px;cursor:pointer;">×</button>
+    <div style="text-align:center;border-bottom:2px solid #17163f;padding-bottom:12px;margin-bottom:18px;">
+      <h3 style="margin:0;color:var(--navy);font-size:20px;">भारत सरकार | GOVT. OF INDIA</h3>
+      <div style="font-size:13px;color:#555">उपभोक्ता मामले, खाद्य और सार्वजनिक वितरण मंत्रालय</div>
+      <h2 style="margin:8px 0 0;color:var(--orange);font-size:24px;">प्रमाणित जे-फॉर्म (e-J-Form)</h2>
+      <div style="font-size:13px;font-weight:700;">अनाज उपार्जन एवं समर्थन मूल्य रसीद</div>
+    </div>
+    <div id="jFormModalContent" style="line-height:1.7;font-size:14px;"></div>
+    <div style="display:flex;justify-content:flex-end;gap:12px;margin-top:20px;border-top:1px solid #ddd;padding-top:15px;">
+      <button class="btn secondary" onclick="window.print()">🖨 प्रिंट करें (Print)</button>
+      <button class="btn btn-green" onclick="document.getElementById('jFormModal').style.display='none'">ठीक है (Close)</button>
+    </div>
+  </div>
 </div>
-<div class="panel" style="margin-top:24px">
-<h2>हाल के आवेदन</h2>
-<div class="table-wrap"><table>
-<thead><tr><th>Application ID</th><th>सेवा</th><th>तिथि</th><th>स्थिति</th></tr></thead>
-<tbody>
-<tr><td>KS-1001</td><td>योजना आवेदन</td><td>05-09-2026</td><td><span class="badge">स्वीकृत</span></td></tr>
-<tr><td>KS-1002</td><td>दस्तावेज़ सत्यापन</td><td>03-09-2026</td><td><span class="badge pending">प्रक्रिया में</span></td></tr>
-<tr><td>KS-1003</td><td>सेवा अनुरोध</td><td>01-09-2026</td><td><span class="badge">पूर्ण</span></td></tr>
-</tbody></table></div>
+
+<!-- Digital Mandi Pass Modal -->
+<div id="mandiPassModal" class="modal-backdrop" style="display:none;position:fixed;inset:0;background:rgba(23,22,63,0.5);z-index:10000;align-items:center;justify-content:center;padding:15px;">
+  <div class="modal" style="background:#fff;max-width:480px;width:100%;border-radius:10px;padding:24px;text-align:center;position:relative;border:2px solid #087f45;">
+    <button onclick="document.getElementById('mandiPassModal').style.display='none'" style="position:absolute;top:15px;right:20px;border:none;background:none;font-size:24px;cursor:pointer;">×</button>
+    <h3 style="margin:0;color:#087f45;">अपनी बारी — डिजिटल मंडी पास</h3>
+    <p style="margin:4px 0 16px;color:#666;font-size:13px;">गेट सत्यापन हेतु यह QR कोड प्रवेश द्वार पर दिखाएं</p>
+    <div class="qr-box">
+      <canvas id="mandiPassQR" width="180" height="180"></canvas>
+      <strong id="mandiPassToken" style="font-size:20px;margin-top:10px;color:var(--navy);letter-spacing:1px;"></strong>
+    </div>
+    <div id="mandiPassDetails" style="text-align:left;margin-top:16px;font-size:13.5px;line-height:1.7;background:#f9f9fc;padding:12px;border-radius:6px;"></div>
+    <button class="btn btn-green" style="margin-top:16px;width:100%;" onclick="window.print()">🖨 पास प्रिंट करें</button>
+  </div>
 </div>
-</div></main>
 
 <footer class="footer">
   <div class="footer-top">
@@ -90,60 +307,410 @@
           <span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br>
           <span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span>
         </div>
-        <div class="social">
-          <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">▶</a>
-          <a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">𝕏</a>
-        </div>
-      </div>
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h3>पोर्टल के बारे में</h3>
-          <a href="about.html">विजन और उद्देश्य</a>
-          <a href="about.html">हमारे बारे में</a>
-          <a href="reports.html">वार्षिक रिपोर्ट</a>
-          <a href="contact.html">संपर्क विवरण</a>
-        </div>
-        <div class="footer-col">
-          <h3>किसान सेवाएँ</h3>
-          <a href="services.html">योजनाएँ और लाभ</a>
-          <a href="services.html">बाजार जानकारी</a>
-          <a href="services.html">मौसम सूचना</a>
-          <a href="dashboard.html">आवेदन स्थिति</a>
-        </div>
-        <div class="footer-col">
-          <h3>दस्तावेज़</h3>
-          <a href="reports.html">मार्गदर्शिका</a>
-          <a href="reports.html">रिपोर्ट</a>
-          <a href="reports.html">सूचनाएँ</a>
-          <a href="#">वेबसाइट नीतियाँ</a>
-        </div>
-        <div class="footer-col">
-          <h3>त्वरित लिंक</h3>
-          <a href="services.html">सभी सेवाएँ</a>
-          <a href="contact.html">सहायता</a>
-          <a href="#">साइटमैप</a>
-        </div>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
-      <div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div>
+      <div>© <span data-year>2026</span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div>
       <div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div>
     </div>
   </div>
 </footer>
-<script src="js/script.js"></script>
-<<<<<<< HEAD
-<script src="js/whatsapp-bot.js"></script>
 
-<button class="wa-fab" id="waFab" aria-label="Open Apni BAARI WhatsApp Help" aria-expanded="false" title="अपनी BAARI WhatsApp Help"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></button>
-<div class="wa-window" id="waWindow" role="dialog" aria-label="अपनी BAARI WhatsApp Help">
-  <div class="wa-head"><div class="wa-head-icon"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></div><div class="wa-head-title">अपनी BAARI Help Bot<div class="wa-sub">WhatsApp-style • Click an option, no typing required</div></div><button class="wa-close" id="waClose" aria-label="Close">×</button></div>
-  <div class="wa-body" id="waBody"><div class="wa-bubble bot">नमस्ते! 👋 अपनी BAARI में आपका स्वागत है। नीचे कोई भी विकल्प चुनें — आपको कुछ टाइप करने की जरूरत नहीं है।</div></div>
-  <div class="wa-options"><button class="wa-option" onclick="chooseWhatsApp('status')">🎫 टोकन स्थिति</button><button class="wa-option" onclick="chooseWhatsApp('booking')">📅 टोकन बुक करें</button><button class="wa-option" onclick="chooseWhatsApp('msp')">💰 आज की MSP</button><button class="wa-option" onclick="chooseWhatsApp('weather')">🌧️ मौसम अलर्ट</button><button class="wa-option" onclick="chooseWhatsApp('payment')">🏦 भुगतान स्थिति</button><button class="wa-help" id="waHelp">❓ मदद / Help</button></div>
-</div>
-=======
->>>>>>> 1c1333f0e82d5f6d609f4c7bf80c342c7faa9e81
+<script src="js/api-client.js"></script>
+<script>
+let currentFarmer = null;
+let currentActiveBooking = null;
+let allCenters = [];
+let allCrops = [];
+
+// Initialize Dashboard
+async function initDashboard() {
+  const sessionUser = getCurrentUser();
+  const sessionToken = getAuthToken();
+
+  // If logged in, update authActionLink to Logout
+  const authContainer = document.getElementById("authActionLink");
+  if (sessionToken && sessionUser) {
+    authContainer.innerHTML = `<span style="font-size:14px;color:#17163f;margin-right:12px;">👤 ${sessionUser.name}</span><a href="javascript:void(0)" onclick="logout()" class="nav-login" style="color:#c44720;">Logout</a>`;
+  }
+
+  // Load default demo farmer or session farmer
+  let farmerId = "FARMER-01";
+  if (sessionUser && sessionUser.farmer && sessionUser.farmer.id) {
+    farmerId = sessionUser.farmer.id;
+  } else if (sessionUser && sessionUser.id) {
+    farmerId = sessionUser.id;
+  }
+
+  // Set today's date in booking input
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById("bookDate").value = today;
+  document.getElementById("bookDate").min = today;
+
+  try {
+    const [dashRes, centersRes, cropsRes] = await Promise.all([
+      apiCall(`/api/farmer/dashboard/${farmerId}`),
+      apiCall("/api/centers"),
+      apiCall("/api/crops")
+    ]);
+
+    currentFarmer = dashRes.farmer;
+    currentActiveBooking = dashRes.active_booking;
+    allCenters = centersRes.centers;
+    allCrops = cropsRes.crops;
+
+    renderFarmerProfile(dashRes.farmer);
+    renderKPIs(dashRes.kpis);
+    renderCenterDropdown(allCenters);
+    renderCropDropdown(allCrops);
+    renderLiveQueue(dashRes.live_queue, dashRes.active_booking);
+    renderBookingsTable(dashRes.bookings_history);
+    renderJFormsTable(dashRes.j_forms);
+    loadMandiWeather(currentActiveBooking ? currentActiveBooking.center_id : "CTR-KRN");
+  } catch (err) {
+    console.error("Dashboard Init Error:", err);
+    showToast("डैशबोर्ड डेटा लोड करने में समस्या आई। डेमो डेटा प्रदर्शित किया जा रहा है।", "error");
+  }
+}
+
+function renderFarmerProfile(farmer) {
+  if (!farmer) return;
+  document.getElementById("farmerNameHero").textContent = farmer.full_name;
+  document.getElementById("farmerGreeting").textContent = `नमस्ते, ${farmer.full_name}! 🙏`;
+  document.getElementById("farmerMeta").textContent = `Farmer ID: ${farmer.farmer_id || 'सत्यापन प्रक्रिया में'} • जिला: ${farmer.district}, ${farmer.state} • मोबाइल: ${farmer.mobile || '—'}`;
+
+  const kycContainer = document.getElementById("kycBadgeContainer");
+  const isApproved = farmer.verification_status === "APPROVED";
+  kycContainer.innerHTML = `
+    <span class="badge ${isApproved ? '' : 'pending'}" style="font-size:14px;padding:6px 14px;">
+      ${isApproved ? '✓ KYC सत्यापित (Approved)' : '⏳ KYC लंबित (Pending)'}
+    </span>
+  `;
+}
+
+function renderKPIs(kpis) {
+  if (!kpis) return;
+  document.getElementById("kpiTotalApps").textContent = String(kpis.total_applications).padStart(2, '0');
+  document.getElementById("kpiCompleted").textContent = String(kpis.completed_procurements).padStart(2, '0');
+  document.getElementById("kpiTotalQty").textContent = `${kpis.total_quantity_quintals} Qtl`;
+  document.getElementById("kpiTotalAmount").textContent = `₹${Number(kpis.total_amount_received).toLocaleString('en-IN')}`;
+}
+
+function renderCenterDropdown(centers) {
+  const select = document.getElementById("bookCenter");
+  select.innerHTML = `<option value="">-- उपार्जन केंद्र चुनें --</option>`;
+  centers.forEach(c => {
+    const colorCircle = c.congestion_color === 'green' ? '🟢' : c.congestion_color === 'yellow' ? '🟡' : '🔴';
+    select.innerHTML += `<option value="${c.id}">${colorCircle} ${c.name} (${c.district}) — ${c.live_ewt}</option>`;
+  });
+}
+
+function renderCropDropdown(crops) {
+  const select = document.getElementById("bookCrop");
+  select.innerHTML = `<option value="">-- फसल चुनें --</option>`;
+  crops.forEach(cr => {
+    select.innerHTML += `<option value="${cr.id}">${cr.hindi_name} (${cr.name}) — MSP: ₹${cr.msp_rate}/क्विंटल</option>`;
+  });
+}
+
+function onCenterChange() {
+  const cid = document.getElementById("bookCenter").value;
+  const c = allCenters.find(x => x.id === cid);
+  if (c) {
+    document.getElementById("centerCongestionHelp").innerHTML = `
+      <strong>${c.name}</strong>: कतार में प्रतीक्षा रत: <b>${c.waiting_count} किसान</b> | अनुमानित प्रतीक्षा समय: <b>${c.live_ewt}</b> (${c.congestion_label})
+    `;
+    loadMandiWeather(cid);
+  }
+}
+
+async function onDateChange() {
+  const cid = document.getElementById("bookCenter").value;
+  const date = document.getElementById("bookDate").value;
+  if (!cid || !date) return;
+  try {
+    const res = await apiCall(`/api/slots/available?center_id=${cid}&date=${date}`);
+    document.getElementById("slotCapacityHint").textContent = 
+      `प्रातः उपलब्ध: ${res.morning.available}/${res.morning.capacity} | दोपहर उपलब्ध: ${res.afternoon.available}/${res.afternoon.capacity}`;
+  } catch(e) {}
+}
+
+function renderLiveQueue(queue, activeBooking) {
+  const queueSection = document.getElementById("liveQueueSection");
+  const card = document.getElementById("activeTokenCard");
+  
+  if (!activeBooking) {
+    queueSection.style.display = "none";
+    card.innerHTML = `<p style="color:#666;">वर्तमान में कोई सक्रिय बुकिंग नहीं है। आप नई बारी आरक्षित कर सकते हैं।</p>`;
+    return;
+  }
+
+  queueSection.style.display = "block";
+  document.getElementById("queueCenterName").textContent = `केंद्र: ${activeBooking.center_name} (${activeBooking.center_district}) • फसल: ${activeBooking.crop_hindi} (${activeBooking.quantity_quintals} Qtl)`;
+  document.getElementById("statMyToken").textContent = activeBooking.token_number;
+  document.getElementById("statCurServing").textContent = queue ? queue.current_token : "KRN-0820";
+  document.getElementById("statAhead").textContent = queue ? `${queue.waiting_count} किसान` : "0 किसान";
+  document.getElementById("statEwt").textContent = queue ? queue.formatted_ewt : "25 min";
+
+  // Pipeline Stage Highlight
+  const stages = {
+    BOOKED: 1,
+    ARRIVED: 2,
+    GROSS_WEIGHED: 3,
+    QUALITY_CHECKED: 4,
+    UNLOADED: 5,
+    COMPLETED: 6
+  };
+  const curStage = stages[activeBooking.status] || 1;
+  for (let i = 1; i <= 6; i++) {
+    const el = document.getElementById(`stage${i}`);
+    if (!el) continue;
+    el.className = "pipe-step";
+    if (i < curStage) el.classList.add("active");
+    else if (i === curStage) el.classList.add("current");
+  }
+
+  // Active Token Card on the right
+  card.innerHTML = `
+    <div style="background:#f4fbf6;border:1px solid #087f45;border-radius:8px;padding:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <strong style="color:#087f45;font-size:18px;">${activeBooking.token_number}</strong>
+        <span class="badge">${activeBooking.status}</span>
+      </div>
+      <div style="margin-top:10px;font-size:13.5px;color:#333;line-height:1.6">
+        मंडी: <b>${activeBooking.center_name}</b><br>
+        फसल: <b>${activeBooking.crop_hindi}</b> (${activeBooking.quantity_quintals} Qtl)<br>
+        तिथि: <b>${activeBooking.slot_date} (${activeBooking.slot_window})</b><br>
+        वाहन: <b>${activeBooking.vehicle_type}</b>
+      </div>
+      <button class="btn btn-green" style="width:100%;margin-top:12px;" onclick="openActiveTokenModal()">डिजिटल मंडी पास व QR खोलें</button>
+    </div>
+  `;
+}
+
+async function triggerGateCheckin() {
+  if (!currentActiveBooking) return;
+  const demoOverride = document.getElementById("demoGpsOverride").checked;
+  const btn = document.getElementById("btnGateCheckin");
+  btn.disabled = true;
+  btn.textContent = "जीपीएस सत्यापन हो रहा है...";
+
+  navigator.geolocation.getCurrentPosition(
+    async (pos) => {
+      await performCheckin(pos.coords.latitude, pos.coords.longitude, demoOverride);
+    },
+    async (err) => {
+      // Fallback demo coordinates if GPS permission denied in browser
+      await performCheckin(currentActiveBooking.latitude || 29.6857, currentActiveBooking.longitude || 76.9905, true);
+    },
+    { timeout: 5000 }
+  );
+}
+
+async function performCheckin(lat, lon, demoOverride) {
+  const btn = document.getElementById("btnGateCheckin");
+  try {
+    const res = await apiCall("/api/checkin/geofence", {
+      method: "POST",
+      body: JSON.stringify({
+        token_number: currentActiveBooking.token_number,
+        center_id: currentActiveBooking.center_id,
+        latitude: lat,
+        longitude: lon,
+        demo_override: demoOverride
+      })
+    });
+    showToast(res.message, res.success ? "success" : "error");
+    if (res.success) {
+      setTimeout(() => location.reload(), 800);
+    }
+  } catch (err) {
+    showToast(err.message || "चेक-इन में समस्या आई।", "error");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "📍 मंडी आगमन दर्ज करें (Gate Check-In)";
+  }
+}
+
+function openActiveTokenModal() {
+  if (!currentActiveBooking) return;
+  document.getElementById("mandiPassToken").textContent = currentActiveBooking.token_number;
+  document.getElementById("mandiPassDetails").innerHTML = `
+    <b>किसान नाम:</b> ${currentFarmer.full_name}<br>
+    <b>Farmer ID:</b> ${currentFarmer.farmer_id || '—'}<br>
+    <b>उपार्जन केंद्र:</b> ${currentActiveBooking.center_name}<br>
+    <b>फसल एवं मात्रा:</b> ${currentActiveBooking.crop_hindi} — ${currentActiveBooking.quantity_quintals} क्विंटल<br>
+    <b>आरक्षित समय:</b> ${currentActiveBooking.slot_date} (${currentActiveBooking.slot_window})<br>
+    <b>वाहन:</b> ${currentActiveBooking.vehicle_type}<br>
+    <b>स्थिति:</b> ${currentActiveBooking.status}
+  `;
+  document.getElementById("mandiPassModal").style.display = "flex";
+  generateMandiQRCode("mandiPassQR", currentActiveBooking.qr_code || currentActiveBooking.token_number);
+}
+
+async function getSmartRecommendation() {
+  const cid = document.getElementById("bookCenter").value || "CTR-KRN";
+  const crop = document.getElementById("bookCrop").value || "CRP-WHT";
+  const qty = document.getElementById("bookQty").value || 40;
+  const vehicle = document.getElementById("bookVehicle").value;
+  const fid = currentFarmer ? currentFarmer.id : "FARMER-01";
+
+  try {
+    const res = await apiCall(`/api/slots/recommend?farmer_id=${fid}&center_id=${cid}&crop_id=${crop}&quantity=${qty}&vehicle_type=${vehicle}`);
+    if (res.best_recommendation) {
+      const r = res.best_recommendation;
+      const conf = confirm(
+        `💡 AI स्मार्ट सिफारिश प्राप्त हुई:\n\nअनुशंसित मंडी: ${r.center_name} (${r.district})\nअनुशंसित तिथि: ${r.date} (${r.recommended_window})\nप्रतीक्षा समय: ${r.ewt} (${r.congestion})\nकारण: ${r.reason}\n\nक्या आप यह अनुशंसित स्लॉट लागू करना चाहते हैं?`
+      );
+      if (conf) {
+        document.getElementById("bookCenter").value = r.center_id;
+        document.getElementById("bookDate").value = r.date;
+        document.getElementById("bookWindow").value = r.recommended_window;
+        onCenterChange();
+      }
+    }
+  } catch (err) {
+    showToast("सिफारिश लोड करने में समस्या आई।", "error");
+  }
+}
+
+async function handleSlotBooking(e) {
+  e.preventDefault();
+  if (!currentFarmer) {
+    showToast("कृपया पहले किसान के रूप में लॉगिन करें।", "error");
+    return false;
+  }
+  const cid = document.getElementById("bookCenter").value;
+  const crop = document.getElementById("bookCrop").value;
+  const qty = parseFloat(document.getElementById("bookQty").value);
+  const vehicle = document.getElementById("bookVehicle").value;
+  const date = document.getElementById("bookDate").value;
+  const windowVal = document.getElementById("bookWindow").value;
+
+  const btn = document.getElementById("btnConfirmBooking");
+  btn.disabled = true;
+  btn.textContent = "आरक्षित हो रहा है...";
+
+  try {
+    const res = await apiCall("/api/slots/book", {
+      method: "POST",
+      body: JSON.stringify({
+        farmer_id: currentFarmer.id,
+        center_id: cid,
+        crop_id: crop,
+        quantity_quintals: qty,
+        vehicle_type: vehicle,
+        slot_date: date,
+        slot_window: windowVal
+      })
+    });
+    showToast(res.message, "success");
+    setTimeout(() => location.reload(), 900);
+  } catch (err) {
+    showToast(err.message || "स्लॉट आरक्षण असफल।", "error");
+    btn.disabled = false;
+    btn.textContent = "स्लॉट आरक्षित करें (Confirm Booking) ✓";
+  }
+  return false;
+}
+
+function renderBookingsTable(bookings) {
+  const tbody = document.getElementById("bookingsTableBody");
+  if (!bookings || bookings.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;color:#777">कोई बुकिंग रिकॉर्ड उपलब्ध नहीं है।</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = bookings.map(b => `
+    <tr>
+      <td><strong>${b.token_number}</strong><br><small style="color:#777">${b.booking_id}</small></td>
+      <td>${b.center_name}</td>
+      <td>${b.crop_hindi}</td>
+      <td>${b.quantity_quintals} Qtl</td>
+      <td>${b.slot_date} (${b.slot_window})</td>
+      <td><span class="badge ${b.status === 'COMPLETED' ? '' : 'pending'}">${b.status}</span></td>
+      <td><button class="btn secondary" style="padding:6px 12px;font-size:13px;" onclick="viewPassByToken('${b.token_number}')">पास देखें</button></td>
+    </tr>
+  `).join("");
+}
+
+function renderJFormsTable(jforms) {
+  const tbody = document.getElementById("jFormsTableBody");
+  if (!jforms || jforms.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;color:#777">कोई जे-फॉर्म रिकॉर्ड नहीं मिला।</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = jforms.map(j => `
+    <tr>
+      <td><strong>${j.j_form_number}</strong></td>
+      <td>${j.crop_name}</td>
+      <td>${j.net_weight_quintals}</td>
+      <td>₹${j.msp_rate}</td>
+      <td><strong>₹${Number(j.payable_amount).toLocaleString('en-IN')}</strong></td>
+      <td><span class="badge ${j.payment_status === 'SUCCESS' ? '' : 'pending'}">${j.payment_status || 'INITIATED'}</span></td>
+      <td><small>${j.utr_number || 'प्रक्रिया में'}</small></td>
+      <td><button class="btn btn-green" style="padding:6px 12px;font-size:13px;" onclick="viewJForm('${j.j_form_number}')">रसीद देखें</button></td>
+    </tr>
+  `).join("");
+}
+
+async function viewPassByToken(token) {
+  try {
+    const res = await apiCall(`/api/tokens/${token}`);
+    currentActiveBooking = res.token;
+    openActiveTokenModal();
+  } catch(e) {
+    showToast("पास विवरण लोड करने में विफल।", "error");
+  }
+}
+
+async function viewJForm(jFormNo) {
+  try {
+    const res = await apiCall(`/api/jforms/${jFormNo}`);
+    const j = res.j_form;
+    document.getElementById("jFormModalContent").innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#fdfcf9;padding:16px;border:1px solid #e2ded5;border-radius:8px;">
+        <div><b>जे-फॉर्म क्रमांक:</b> ${j.j_form_number}</div>
+        <div><b>जारी तिथि:</b> ${j.generated_at}</div>
+        <div><b>किसान का नाम:</b> ${j.farmer_name}</div>
+        <div><b>Farmer ID:</b> ${j.official_farmer_id || '—'}</div>
+        <div><b>उपार्जन केंद्र:</b> ${j.center_name}</div>
+        <div><b>टोकन नंबर:</b> ${j.token_number}</div>
+        <div><b>फसल का नाम:</b> ${j.crop_name}</div>
+        <div><b>शुद्ध तौल (Net Weight):</b> ${j.net_weight_quintals} क्विंटल</div>
+        <div><b>एमएसपी दर (MSP Rate):</b> ₹${j.msp_rate}/क्विंटल</div>
+        <div><b>कुल राशि:</b> ₹${Number(j.gross_amount).toLocaleString('en-IN')}</div>
+        <div><b>गुणवत्ता कटौती:</b> ₹${j.deduction_amount}</div>
+        <div style="font-size:16px;color:#087f45;"><b>अंतिम देय राशि:</b> ₹${Number(j.payable_amount).toLocaleString('en-IN')}</div>
+      </div>
+      <div style="margin-top:14px;padding:12px;background:#eef7ee;border-radius:6px;border-left:4px solid #087f45;">
+        <b>डीबीटी भुगतान स्थिति:</b> ${j.payment_status === 'SUCCESS' ? 'खाते में क्रेडिट सफल ✓' : 'प्रक्रिया में'}<br>
+        <b>बैंक खाता:</b> ${j.bank_account} (${j.ifsc_code})<br>
+        <b>UTR संदर्भ संख्या:</b> <code>${j.utr_number || 'PFMS-PROCESSING'}</code>
+      </div>
+    `;
+    document.getElementById("jFormModal").style.display = "flex";
+  } catch(err) {
+    showToast("जे-फॉर्म लोड करने में समस्या आई।", "error");
+  }
+}
+
+async function loadMandiWeather(centerId) {
+  try {
+    const w = await apiCall(`/api/weather/${centerId}`);
+    document.getElementById("mandiWeatherBox").innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <strong>${w.center_name || 'मंडी मौसम'}</strong>
+        <span style="color:#c44720;font-weight:700;">${w.temperature}°C</span>
+      </div>
+      <div style="margin-top:6px;">स्थिति: ${w.condition} • वर्षा संभावना: <b>${w.rain_probability}%</b></div>
+      <div style="font-size:12px;color:#666;margin-top:6px;">${w.advisory}</div>
+    `;
+  } catch(e) {}
+}
+
+document.addEventListener("DOMContentLoaded", initDashboard);
+</script>
 </body>
 </html>

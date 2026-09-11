@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="किसान सूचना एवं सेवा पोर्टल - Admin Portal Login">
+<title>प्रशासक लॉगिन | किसान सूचना एवं सेवा पोर्टल</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #17163f;
+    --orange: #c44720;
+    --green: #087f45;
+    --border: #d9dbe7;
+    --bg: #ffffff;
+  }
+  .login-wrapper { display: flex; justify-content: center; padding: 40px 0; }
+  .login-panel { background-color: #ffffff; border: 1px solid var(--border); width: 100%; max-width: 440px; border-radius: 10px; box-shadow: 0 4px 15px rgba(23,22,63,0.06); overflow: hidden; }
+  .login-panel-header { background-color: var(--navy); color: #fff; padding: 20px; text-align: center; }
+  .login-panel-header h1 { font-size: 20px; margin: 0; font-weight: 800; }
+  .login-panel-header p { margin: 6px 0 0; font-size: 13px; color: #d0d0e6; }
+  .login-panel-body { padding: 24px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 13.5px; font-weight: 600; margin-bottom: 6px; color: var(--navy); }
+  .form-group input, .form-group select { width: 100%; padding: 10px 12px; border: 1px solid #cfd1dc; border-radius: 6px; font-size: 14px; outline: none; }
+  .form-group input:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(23,22,63,0.1); }
+  .btn-login { width: 100%; background-color: var(--navy); color: #ffffff; border: none; padding: 12px; font-size: 15px; font-weight: 700; border-radius: 6px; cursor: pointer; }
+  .btn-login:hover { opacity: 0.95; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="utility">
+    <div class="container utility-inner">
+      <div><strong>भारत सरकार</strong> | Government of India</div>
+      <div class="utility-right">
+        <a href="#">स्क्रीन रीडर</a>
+        <a href="#">A-</a><a href="#">A</a><a href="#">A+</a>
+        <a href="#">हिंदी / English</a>
+      </div>
+    </div>
+  </div>
+  <div class="branding">
+    <div class="container branding-inner">
+      <a href="index.html">
+        <img class="logo" src="assets/logo.png" alt="अपनी बारी लोगो">
+      </a>
+      <div class="brand-divider"></div>
+      <div class="brand-copy">
+        <div class="tagline">हर किसान की बारी, सही समय की जानकारी</div>
+        <div class="department">किसान सूचना एवं सेवा पोर्टल</div>
+        <div class="department"><span>Ministry of Consumer Affairs, Food and Public Distribution</span></div>
+      </div>
+      <form class="search-box" id="siteSearch">
+        <input type="search" placeholder="Search Services" aria-label="Search Services">
+        <button type="submit" aria-label="Search">⌕</button>
+      </form>
+    </div>
+  </div>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">होम</a>
+        <a href="about.html">हमारे बारे में</a>
+        <a href="services.html">सेवाएँ</a>
+        <a href="dashboard.html">डैशबोर्ड</a>
+        <a href="reports.html">रिपोर्ट</a>
+        <a href="contact.html">संपर्क करें</a>
+        <a href="login.html" class="nav-login">Login</a>
+        <a href="registration.html" class="btn-outline nav-register">Register</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="container">
+    <div class="login-wrapper">
+      <div class="login-panel">
+        <div class="login-panel-header">
+          <h1>प्रशासक लॉगिन (Administrator Portal)</h1>
+          <p>राज्य स्तरीय नीति, सत्यापन एवं मास्टर डेटा प्रबंधन</p>
+        </div>
+        <div class="login-panel-body">
+          <form onsubmit="return adminLoginSubmit(event);">
+            <div class="form-group">
+              <label for="admin-mobile">मोबाइल नंबर (Registered Mobile)</label>
+              <input type="tel" id="admin-mobile" maxlength="10" value="9999999999" placeholder="Enter 10-digit Mobile">
+              <small style="color:#666;font-size:12px;margin-top:4px;display:block;">डेमो प्रशासक मोबाइल: 9999999999</small>
+            </div>
+
+            <div class="form-group">
+              <label for="admin-otp">OTP (One-Time Password)</label>
+              <div style="display:flex;gap:8px;">
+                <input type="text" id="admin-otp" maxlength="6" value="123456" placeholder="Enter 6-digit OTP" style="flex:1;">
+                <button type="button" id="admin-send-otp" style="white-space:nowrap;padding:8px 12px;border:1px solid var(--navy);background:#fff;color:var(--navy);font-weight:600;cursor:pointer;border-radius:6px;">OTP भेजें</button>
+              </div>
+              <small style="color:#666;font-size:12px;margin-top:4px;display:block;">डेमो OTP: 123456</small>
+            </div>
+
+            <button type="submit" class="btn-login" style="margin-top:10px;">प्रशासक पोर्टल में प्रवेश करें</button>
+            <div style="text-align:right;margin-top:14px;font-size:13px;">
+              <a href="contact.html" style="color:var(--orange)">तकनीकी सहायता चाहिए?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="कृषि भारत लोगो">
+        <div>
+          <strong>किसान सूचना एवं सेवा पोर्टल</strong><br>
+          <span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br>
+          <span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <div>© <span data-year>2026</span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div>
+      <div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/api-client.js"></script>
+<script>
+document.getElementById('admin-send-otp')?.addEventListener('click', async function() {
+  const mobile = document.getElementById('admin-mobile').value.trim() || "9999999999";
+  const btn = this;
+  btn.disabled = true;
+  btn.textContent = 'भेजा जा रहा है...';
+  try {
+    const res = await apiCall('/api/auth/send-otp', {
+      method: 'POST',
+      body: JSON.stringify({ mobile, role: 'ADMIN' })
+    });
+    showToast(res.message, 'success');
+    btn.textContent = 'OTP भेजा गया ✓';
+    document.getElementById('admin-otp').value = res.demo_otp || '123456';
+  } catch (err) {
+    showToast(err.message || 'OTP भेजने में विफल।', 'error');
+  } finally {
+    setTimeout(() => { btn.disabled = false; btn.textContent = 'OTP फिर भेजें'; }, 30000);
+  }
+});
+
+async function adminLoginSubmit(event) {
+  event.preventDefault();
+  const mobile = document.getElementById('admin-mobile').value.trim() || "9999999999";
+  const otp = document.getElementById('admin-otp').value.trim();
+
+  if (!otp) {
+    showToast('कृपया OTP दर्ज करें।', 'error');
+    return false;
+  }
+
+  const btn = document.querySelector('.btn-login');
+  btn.disabled = true;
+  btn.textContent = 'प्रवेश हो रहा है...';
+
+  try {
+    const res = await apiCall('/api/auth/verify-otp', {
+      method: 'POST',
+      body: JSON.stringify({ mobile, otp, role: 'ADMIN' })
+    });
+    setAuthSession(res.token, res.user);
+    showToast('प्रशासक लॉगिन सफल!', 'success');
+    setTimeout(() => { window.location.href = 'admin-dashboard.html'; }, 400);
+  } catch (err) {
+    showToast(err.message || 'लॉगिन असफल रहा।', 'error');
+    btn.disabled = false;
+    btn.textContent = 'प्रशासक पोर्टल में प्रवेश करें';
+  }
+  return false;
+}
+</script>
+</body>
+</html>

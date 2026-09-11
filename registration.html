@@ -200,12 +200,13 @@ input:focus,select:focus,textarea:focus{border-color:var(--green);box-shadow:0 0
 <div class="toast" id="toast"></div>
 <div class="modal" id="successModal"><div class="modal-card"><div style="font-size:52px">✅</div><h2>आवेदन सफलतापूर्वक जमा हुआ</h2><p>आपका आवेदन सरकारी सत्यापन के लिए भेजा गया है।</p><div class="farmer-id" id="applicationId"></div><p style="color:#666">Farmer ID सत्यापन पूर्ण होने के बाद जारी की जाएगी।</p><button class="btn btn-green" onclick="location.reload()">ठीक है</button></div></div>
 
+<script src="js/api-client.js"></script>
 <script>
 let selectedType="";
 const requiredBase=["mobile","name","guardian","dob","gender","category","identityType","identityNo","address","state","district","tehsil","village","khasra","totalLand","cultivable","crop","irrigation","experience"];
 const typeText={owner:"भूमि स्वामी",tenant:"किरायेदार",sharecropper:"बटाईदार / हिस्सेदार",joint:"संयुक्त स्वामी"};
 
-function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.style.display="block";setTimeout(()=>t.style.display="none",3000)}
+function toast(msg){ showToast(msg, "info"); }
 function chooseType(type){
  selectedType=type;
  document.querySelectorAll(".choice").forEach(c=>c.classList.toggle("selected",c.dataset.type===type));
@@ -236,6 +237,7 @@ document.querySelectorAll("input,select,textarea").forEach(e=>e.addEventListener
 function val(id){const e=document.getElementById(id);return e?e.value.trim():""}
 function updateReview(){
  const box=document.getElementById("reviewBox");
+ if(!box) return;
  const items=[
   ["पूरा नाम",val("name")||"—"],
   ["मोबाइल",val("mobile")||"—"],
@@ -269,20 +271,23 @@ function updateReview(){
   ["अन्य दस्तावेज़","docOther"]
  ];
  const dr=document.getElementById("documentReview");
- dr.innerHTML=docs.map(([label,id])=>{
-   const f=document.getElementById(id);
-   const name=f && f.files.length ? f.files[0].name : "अभी अपलोड नहीं किया गया";
-   const ok=f && f.files.length;
-   return `<div class="review-item"><b>${label}</b><span style="color:${ok?'#087f45':'#a34b35'}">${ok?'✓ ':''}${name}</span></div>`;
- }).join("");
+ if(dr){
+   dr.innerHTML=docs.map(([label,id])=>{
+     const f=document.getElementById(id);
+     const name=f && f.files && f.files.length ? f.files[0].name : "अभी अपलोड नहीं किया गया";
+     const ok=f && f.files && f.files.length;
+     return `<div class="review-item"><b>${label}</b><span style="color:${ok?'#087f45':'#a34b35'}">${ok?'✓ ':''}${name}</span></div>`;
+   }).join("");
+ }
 }
 
 function fileRequired(id,msg){
- const f=document.getElementById(id); if(!f.files.length){toast(msg);f.scrollIntoView({behavior:"smooth",block:"center"});return false} return true;
+ const f=document.getElementById(id); if(!f || !f.files.length){toast(msg);f?.scrollIntoView({behavior:"smooth",block:"center"});return false} return true;
 }
+
 function validate(){
  if(!selectedType){toast("कृपया खेती का प्रकार चुनें।");document.getElementById("cultivation").scrollIntoView({behavior:"smooth"});return false}
- for(const id of requiredBase){const e=document.getElementById(id);if(!val(id)){toast("कृपया सभी * अनिवार्य फ़ील्ड भरें।");e.scrollIntoView({behavior:"smooth",block:"center"});e.focus();return false}}
+ for(const id of requiredBase){const e=document.getElementById(id);if(!val(id)){toast("कृपया सभी * अनिवार्य फ़ील्ड भरें।");e?.scrollIntoView({behavior:"smooth",block:"center"});e?.focus();return false}}
  if(!fileRequired("docIdentity","पहचान प्रमाण अपलोड करें।"))return false;
  if(!fileRequired("docLand","भूमि रिकॉर्ड / RoR अपलोड करें।"))return false;
  if(selectedType==="tenant"&&!fileRequired("docLease","किरायेदारी / लीज प्रमाण अपलोड करें।"))return false;
@@ -293,12 +298,63 @@ function validate(){
  if(!document.getElementById("declaration").checked){toast("कृपया घोषणा स्वीकार करें।");return false}
  return true;
 }
-function submitRegistration(){
- if(!validate())return;
- const id="BAARI-"+new Date().getFullYear()+"-"+Math.floor(100000+Math.random()*900000);
- document.getElementById("applicationId").textContent=id;
- document.getElementById("successModal").style.display="flex";
+
+async function submitRegistration(){
+ if(!validate()) return;
+ const submitBtn = document.querySelector(".btn-green");
+ if(submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "जमा किया जा रहा है..."; }
+
+ try {
+   const formData = new FormData();
+   formData.append("mobile", val("mobile"));
+   formData.append("name", val("name"));
+   formData.append("guardian", val("guardian"));
+   formData.append("dob", val("dob"));
+   formData.append("gender", val("gender"));
+   formData.append("category", val("category"));
+   formData.append("identity_type", val("identityType"));
+   formData.append("identity_no", val("identityNo"));
+   formData.append("address", val("address"));
+   formData.append("cultivation_type", selectedType);
+   formData.append("state", val("state"));
+   formData.append("district", val("district"));
+   formData.append("tehsil", val("tehsil"));
+   formData.append("village", val("village"));
+   formData.append("khasra", val("khasra"));
+   formData.append("khata", val("khata"));
+   formData.append("total_land", val("totalLand") || 0);
+   formData.append("cultivable_land", val("cultivable") || 0);
+   formData.append("irrigated_land", val("irrigated") || 0);
+   formData.append("rainfed_land", val("rainfed") || 0);
+   formData.append("crop", val("crop"));
+   formData.append("irrigation_source", val("irrigation"));
+   formData.append("experience", val("experience") || 0);
+   formData.append("bank_account", val("bank"));
+   formData.append("ifsc", val("ifsc"));
+   formData.append("other_agri", val("otherAgri"));
+
+   const docIdentity = document.getElementById("docIdentity");
+   if(docIdentity?.files[0]) formData.append("doc_identity", docIdentity.files[0]);
+   const docLand = document.getElementById("docLand");
+   if(docLand?.files[0]) formData.append("doc_land", docLand.files[0]);
+   const docPhoto = document.getElementById("docPhoto");
+   if(docPhoto?.files[0]) formData.append("doc_photo", docPhoto.files[0]);
+
+   const res = await apiCall("/api/farmers/register", {
+     method: "POST",
+     body: formData
+   });
+
+   document.getElementById("applicationId").textContent = res.application_id;
+   document.getElementById("successModal").style.display = "flex";
+   showToast("पंजीकरण आवेदन सफलतापूर्वक डेटाबेस में दर्ज हुआ!", "success");
+ } catch(err) {
+   showToast(err.message || "आवेदन जमा करने में विफल।", "error");
+ } finally {
+   if(submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "पंजीकरण जमा करें ✓"; }
+ }
 }
+
 updateReview();
 </script>
 <<<<<<< HEAD

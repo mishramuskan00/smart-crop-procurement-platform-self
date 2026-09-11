@@ -9,18 +9,129 @@
 <div class="utility"><div class="container utility-inner"><div><strong>भारत सरकार</strong> | Government of India</div><div class="utility-right"><a href="#">स्क्रीन रीडर</a><a href="#">A-</a><a href="#">A</a><a href="#">A+</a><a href="#">हिंदी / English</a></div></div></div>
 <div class="branding"><div class="container branding-inner"><a href="gov-dashboard.html"><img class="logo" src="assets/gov-logo.png" alt="कृषि भारत लोगो"></a><div class="brand-divider"></div><div class="brand-copy"><div class="tagline">हर किसान की बारी, सही समय की जानकारी</div><div class="department">किसान सूचना एवं सेवा पोर्टल</div><div class="department"><span>Ministry of Consumer Affairs, Food and Public Distribution</span></div></div><div class="search-box"><input id="globalSearch" type="search" placeholder="Search Services" aria-label="Search Services"><button onclick="searchPage()" aria-label="Search">⌕</button></div></div></div>
 <nav class="navbar"><div class="container nav-inner"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="nav-links"><a href="gov-dashboard.html" class="">Dashboard</a><a href="gov-live-centers.html" class="active">Live Centers</a><a href="gov-queue-management.html" class="">Queue Management</a><a href="gov-slot-management.html" class="">Slot Management</a><a href="gov-procurement.html" class="">Procurement</a><a href="gov-analytics.html" class="">Analytics</a><a href="gov-reports.html" class="">Reports</a><a href="gov-notifications.html" class="">Notifications</a><a href="gov-settings.html" class="">Settings</a></div></div>
-<<<<<<< HEAD
-</nav>
-<div class="price-ticker" id="latest-price-bar" role="region" aria-label="Latest MSP prices"><div class="price-ticker-track"><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong><strong>अपनी BAARI • किसान मूल्य सूचना</strong><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong></div></div>
-</header><section class="page-hero"><div class="container"><h1>Live Centers</h1><div class="breadcrumb">होम / Government Portal / Live Centers</div></div></section><main class="content"><div class="container"><div class="panel"><div class="filter-row"><input id="centerSearch" placeholder="Search centers" onkeyup="filterRows()"><select id="statusFilter" onchange="filterRows()"><option>All Status</option><option>Normal</option><option>High Load</option><option>Overloaded</option></select></div><div class="table-wrap"><table id="centerTable"><thead><tr><th>Center</th><th>Queue</th><th>Wait</th><th>Capacity</th><th>Utilization</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>Karnal Procurement Hub</td><td>87</td><td>1h 25m</td><td>300</td><td>92%</td><td class="status-red">Overloaded</td><td><button class="btn secondary" onclick="openModal('Karnal Procurement Hub','Incoming load: 186 T<br>Scheduled: 278<br>Completed: 191')">View Details</button></td></tr><tr><td>Panipat Hub</td><td>54</td><td>48 min</td><td>300</td><td>74%</td><td class="status-high">High Load</td><td><button class="btn secondary" onclick="openModal('Panipat Hub','Incoming load: 94 T<br>Available capacity for redirected slots.')">View Details</button></td></tr><tr><td>Sonipat Center</td><td>31</td><td>27 min</td><td>260</td><td>52%</td><td class="status-normal">Normal</td><td><button class="btn secondary" onclick="openModal('Sonipat Center','Incoming load: 61 T<br>Normal operations.')">View Details</button></td></tr><tr><td>Rohtak Center</td><td>69</td><td>1h 02m</td><td>280</td><td>86%</td><td class="status-high">High Load</td><td><button class="btn secondary" onclick="openModal('Rohtak Center','Weather contingency under review.')">View Details</button></td></tr></tbody></table></div></div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script><script>function filterRows(){const q=(document.getElementById('centerSearch')?.value||'').toLowerCase();const f=(document.getElementById('statusFilter')?.value||'All Status');document.querySelectorAll('#centerTable tbody tr').forEach(r=>{const text=r.innerText.toLowerCase();const okQ=!q||text.includes(q);const okF=f==='All Status'||text.includes(f.toLowerCase());r.style.display=okQ&&okF?'':'none'})}</script><script src="js/whatsapp-bot.js"></script>
+</nav></header><section class="page-hero"><div class="container"><h1>Live Centers (सक्रिय खरीद केंद्र)</h1><div class="breadcrumb">होम / Government Portal / Live Centers</div></div></section><main class="content"><div class="container"><div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px"><div><h2 style="margin:0;color:var(--navy)">Real-Time Procurement Centers Across India</h2><p style="margin:4px 0 0;color:var(--muted);font-size:14px">Live telemetry of active mandi queues, estimated wait time, and weighbridge capacity.</p></div><button class="btn secondary" onclick="loadLiveCenters()" style="padding:8px 16px">↻ Refresh Live Data</button></div><div class="filter-row"><input id="centerSearch" placeholder="Search center, district, or state..." onkeyup="filterRows()"><select id="statusFilter" onchange="filterRows()"><option value="All Status">All Status</option><option value="Normal">Normal (&lt;65%)</option><option value="High Load">High Load (65-85%)</option><option value="Overloaded">Overloaded (&gt;85%)</option></select></div><div class="table-wrap"><table id="centerTable"><thead><tr><th>Center Name</th><th>District / State</th><th>Queue</th><th>Est. Wait</th><th>Daily Cap</th><th>Utilization</th><th>Congestion Status</th><th>Action</th></tr></thead><tbody id="centerTableBody"><tr><td colspan="8" style="text-align:center;padding:24px;color:var(--muted)">Loading real-time center data from backend...</td></tr></tbody></table></div></div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script><script src="js/api-client.js"></script><script>
+let centersData = [];
 
-<button class="wa-fab" id="waFab" aria-label="Open Apni BAARI WhatsApp Help" aria-expanded="false" title="अपनी BAARI WhatsApp Help"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></button>
-<div class="wa-window" id="waWindow" role="dialog" aria-label="अपनी BAARI WhatsApp Help">
-  <div class="wa-head"><div class="wa-head-icon"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></div><div class="wa-head-title">अपनी BAARI Help Bot<div class="wa-sub">WhatsApp-style • Click an option, no typing required</div></div><button class="wa-close" id="waClose" aria-label="Close">×</button></div>
-  <div class="wa-body" id="waBody"><div class="wa-bubble bot">नमस्ते! 👋 अपनी BAARI में आपका स्वागत है। नीचे कोई भी विकल्प चुनें — आपको कुछ टाइप करने की जरूरत नहीं है।</div></div>
-  <div class="wa-options"><button class="wa-option" onclick="chooseWhatsApp('status')">🎫 टोकन स्थिति</button><button class="wa-option" onclick="chooseWhatsApp('booking')">📅 टोकन बुक करें</button><button class="wa-option" onclick="chooseWhatsApp('msp')">💰 आज की MSP</button><button class="wa-option" onclick="chooseWhatsApp('weather')">🌧️ मौसम अलर्ट</button><button class="wa-option" onclick="chooseWhatsApp('payment')">🏦 भुगतान स्थिति</button><button class="wa-help" id="waHelp">❓ मदद / Help</button></div>
-</div>
-</body></html>
-=======
-</nav></header><section class="page-hero"><div class="container"><h1>Live Centers</h1><div class="breadcrumb">होम / Government Portal / Live Centers</div></div></section><main class="content"><div class="container"><div class="panel"><div class="filter-row"><input id="centerSearch" placeholder="Search centers" onkeyup="filterRows()"><select id="statusFilter" onchange="filterRows()"><option>All Status</option><option>Normal</option><option>High Load</option><option>Overloaded</option></select></div><div class="table-wrap"><table id="centerTable"><thead><tr><th>Center</th><th>Queue</th><th>Wait</th><th>Capacity</th><th>Utilization</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>Karnal Procurement Hub</td><td>87</td><td>1h 25m</td><td>300</td><td>92%</td><td class="status-red">Overloaded</td><td><button class="btn secondary" onclick="openModal('Karnal Procurement Hub','Incoming load: 186 T<br>Scheduled: 278<br>Completed: 191')">View Details</button></td></tr><tr><td>Panipat Hub</td><td>54</td><td>48 min</td><td>300</td><td>74%</td><td class="status-high">High Load</td><td><button class="btn secondary" onclick="openModal('Panipat Hub','Incoming load: 94 T<br>Available capacity for redirected slots.')">View Details</button></td></tr><tr><td>Sonipat Center</td><td>31</td><td>27 min</td><td>260</td><td>52%</td><td class="status-normal">Normal</td><td><button class="btn secondary" onclick="openModal('Sonipat Center','Incoming load: 61 T<br>Normal operations.')">View Details</button></td></tr><tr><td>Rohtak Center</td><td>69</td><td>1h 02m</td><td>280</td><td>86%</td><td class="status-high">High Load</td><td><button class="btn secondary" onclick="openModal('Rohtak Center','Weather contingency under review.')">View Details</button></td></tr></tbody></table></div></div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script><script>function filterRows(){const q=(document.getElementById('centerSearch')?.value||'').toLowerCase();const f=(document.getElementById('statusFilter')?.value||'All Status');document.querySelectorAll('#centerTable tbody tr').forEach(r=>{const text=r.innerText.toLowerCase();const okQ=!q||text.includes(q);const okF=f==='All Status'||text.includes(f.toLowerCase());r.style.display=okQ&&okF?'':'none'})}</script></body></html>
->>>>>>> 1c1333f0e82d5f6d609f4c7bf80c342c7faa9e81
+async function loadLiveCenters() {
+  try {
+    const centers = await ApniBaariAPI.getCenters();
+    centersData = centers;
+    renderCenterTable(centers);
+  } catch (err) {
+    console.error('Failed to load centers:', err);
+    document.getElementById('centerTableBody').innerHTML = `<tr><td colspan="8" style="text-align:center;color:#bd4a1b;padding:20px">Error loading live data. Please ensure backend server is active.</td></tr>`;
+  }
+}
+
+function renderCenterTable(list) {
+  const tbody = document.getElementById('centerTableBody');
+  if (!list || list.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--muted)">No procurement centers found matching criteria.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = list.map(c => {
+    let statusClass = 'status-normal';
+    let statusLabel = 'Normal';
+    if (c.status === 'OVERLOADED' || c.utilization_pct >= 85) {
+      statusClass = 'status-red';
+      statusLabel = 'Overloaded';
+    } else if (c.status === 'HIGH_LOAD' || c.utilization_pct >= 65) {
+      statusClass = 'status-high';
+      statusLabel = 'High Load';
+    }
+
+    const waitFormatted = c.current_wait_min >= 60 
+      ? `${Math.floor(c.current_wait_min/60)}h ${c.current_wait_min%60}m` 
+      : `${c.current_wait_min} min`;
+
+    const detailsPayload = JSON.stringify({
+      name: c.name,
+      district: c.district,
+      state: c.state,
+      queue: c.queue_length,
+      wait: waitFormatted,
+      capacity: c.capacity_per_day,
+      utilization: c.utilization_pct,
+      weighbridges: c.weighbridges,
+      bays: c.unloading_bays,
+      officer: c.incharge_name || 'Shri R. K. Verma',
+      phone: c.incharge_phone || '9876543210',
+      lat: c.latitude,
+      lng: c.longitude
+    }).replace(/"/g, '&quot;');
+
+    return `<tr>
+      <td><strong>${c.name}</strong><br><small style="color:var(--muted)">ID: ${c.id}</small></td>
+      <td>${c.district}, ${c.state}</td>
+      <td><span style="font-weight:700;font-size:16px">${c.queue_length}</span> vehicles</td>
+      <td>${waitFormatted}</td>
+      <td>${c.capacity_per_day} qtl/day</td>
+      <td>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="flex:1;height:8px;background:#e2e2ea;border-radius:4px;overflow:hidden;min-width:60px">
+            <div style="height:100%;width:${Math.min(c.utilization_pct, 100)}%;background:${c.utilization_pct>=85?'#bd4a1b':c.utilization_pct>=65?'#f2a61a':'#2f7d32'}"></div>
+          </div>
+          <span style="font-weight:700">${c.utilization_pct}%</span>
+        </div>
+      </td>
+      <td><span class="${statusClass}">${statusLabel}</span></td>
+      <td><button class="btn secondary" style="padding:6px 14px;font-size:13px" onclick="showCenterModal('${c.id}')">View Details</button></td>
+    </tr>`;
+  }).join('');
+}
+
+function showCenterModal(centerId) {
+  const c = centersData.find(item => item.id === centerId);
+  if (!c) return;
+
+  const waitFormatted = c.current_wait_min >= 60 
+    ? `${Math.floor(c.current_wait_min/60)}h ${c.current_wait_min%60}m` 
+    : `${c.current_wait_min} min`;
+
+  const bodyHtml = `
+    <div style="line-height:1.7;font-size:14px">
+      <div style="background:#f8f8fc;padding:14px;border-radius:8px;margin-bottom:14px;border:1px solid #e0e0ea">
+        <strong style="font-size:16px;color:var(--navy)">${c.name}</strong><br>
+        <span style="color:var(--muted)">District: ${c.district} | State: ${c.state}</span><br>
+        <span style="color:var(--muted)">Geo Coordinates: ${c.latitude.toFixed(4)}°N, ${c.longitude.toFixed(4)}°E (2.0 km Geo-fence Active)</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+        <div style="border:1px solid #e2e2ea;padding:10px;border-radius:6px"><strong>Live Queue:</strong> ${c.queue_length} vehicles</div>
+        <div style="border:1px solid #e2e2ea;padding:10px;border-radius:6px"><strong>Estimated Wait:</strong> ${waitFormatted}</div>
+        <div style="border:1px solid #e2e2ea;padding:10px;border-radius:6px"><strong>Daily Capacity:</strong> ${c.capacity_per_day} qtl</div>
+        <div style="border:1px solid #e2e2ea;padding:10px;border-radius:6px"><strong>Utilization:</strong> ${c.utilization_pct}%</div>
+        <div style="border:1px solid #e2e2ea;padding:10px;border-radius:6px"><strong>Weighbridges:</strong> ${c.weighbridges || 2} Active</div>
+        <div style="border:1px solid #e2e2ea;padding:10px;border-radius:6px"><strong>Unloading Bays:</strong> ${c.unloading_bays || 4} Ready</div>
+      </div>
+      <div style="padding:10px;border-radius:6px;background:${c.utilization_pct>=85?'#fff2f0':'#f0fff4'};border:1px solid ${c.utilization_pct>=85?'#f5c6cb':'#c3e6cb'};margin-bottom:16px">
+        <strong>Status Directive:</strong> ${c.utilization_pct>=85 
+          ? '⚠️ Center is operating near saturation. Redirection to nearby low-load centers (Panipat Hub) is recommended via Smart Decision Engine.' 
+          : '✓ Center operational parameters within nominal thresholds. Slots open for standard dispatch.'}
+      </div>
+    </div>
+  `;
+  openModal(`Center Details: ${c.name}`, bodyHtml);
+}
+
+function filterRows() {
+  const q = (document.getElementById('centerSearch')?.value || '').toLowerCase();
+  const f = (document.getElementById('statusFilter')?.value || 'All Status');
+
+  const filtered = centersData.filter(c => {
+    const text = `${c.name} ${c.district} ${c.state} ${c.id}`.toLowerCase();
+    const okQ = !q || text.includes(q);
+    
+    let statusLabel = 'Normal';
+    if (c.status === 'OVERLOADED' || c.utilization_pct >= 85) statusLabel = 'Overloaded';
+    else if (c.status === 'HIGH_LOAD' || c.utilization_pct >= 65) statusLabel = 'High Load';
+
+    const okF = (f === 'All Status') || (statusLabel.toLowerCase() === f.toLowerCase());
+    return okQ && okF;
+  });
+
+  renderCenterTable(filtered);
+}
+
+document.addEventListener('DOMContentLoaded', loadLiveCenters);
+</script></body></html>

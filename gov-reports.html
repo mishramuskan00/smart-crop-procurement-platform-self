@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Reports | किसान सूचना एवं सेवा पोर्टल</title><link rel="stylesheet" href="gov-style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Reports & Audit | किसान सूचना एवं सेवा पोर्टल</title><link rel="stylesheet" href="gov-style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <<<<<<< HEAD
@@ -9,18 +9,162 @@
 <div class="utility"><div class="container utility-inner"><div><strong>भारत सरकार</strong> | Government of India</div><div class="utility-right"><a href="#">स्क्रीन रीडर</a><a href="#">A-</a><a href="#">A</a><a href="#">A+</a><a href="#">हिंदी / English</a></div></div></div>
 <div class="branding"><div class="container branding-inner"><a href="gov-dashboard.html"><img class="logo" src="assets/gov-logo.png" alt="कृषि भारत लोगो"></a><div class="brand-divider"></div><div class="brand-copy"><div class="tagline">हर किसान की बारी, सही समय की जानकारी</div><div class="department">किसान सूचना एवं सेवा पोर्टल</div><div class="department"><span>Ministry of Consumer Affairs, Food and Public Distribution</span></div></div><div class="search-box"><input id="globalSearch" type="search" placeholder="Search Services" aria-label="Search Services"><button onclick="searchPage()" aria-label="Search">⌕</button></div></div></div>
 <nav class="navbar"><div class="container nav-inner"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="nav-links"><a href="gov-dashboard.html" class="">Dashboard</a><a href="gov-live-centers.html" class="">Live Centers</a><a href="gov-queue-management.html" class="">Queue Management</a><a href="gov-slot-management.html" class="">Slot Management</a><a href="gov-procurement.html" class="">Procurement</a><a href="gov-analytics.html" class="">Analytics</a><a href="gov-reports.html" class="active">Reports</a><a href="gov-notifications.html" class="">Notifications</a><a href="gov-settings.html" class="">Settings</a></div></div>
-<<<<<<< HEAD
-</nav>
-<div class="price-ticker" id="latest-price-bar" role="region" aria-label="Latest MSP prices"><div class="price-ticker-track"><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong><strong>अपनी BAARI • किसान मूल्य सूचना</strong><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong></div></div>
-</header><section class="page-hero"><div class="container"><h1>Reports</h1><div class="breadcrumb">होम / Government Portal / Reports</div></div></section><main class="content"><div class="container"><div class="grid"><div class="card"><div class="icon">01</div><h3>Daily Procurement Report</h3><p>Center-wise arrivals, procurement and payment initiation.</p><button class="btn" style="margin-top:14px" onclick="openModal('Daily Report','Report preview generated from prototype data.')">View Report</button></div><div class="card"><div class="icon">02</div><h3>Center Performance</h3><p>Capacity utilization, processing rate and waiting time.</p><button class="btn" style="margin-top:14px" onclick="openModal('Center Performance','Karnal 92% · Panipat 74% · Sonipat 52% · Rohtak 86%')">View Report</button></div><div class="card"><div class="icon">03</div><h3>Congestion Summary</h3><p>Overloaded centers and corrective actions taken.</p><button class="btn" style="margin-top:14px" onclick="openModal('Congestion Summary','2 centers require attention in the current demo snapshot.')">View Report</button></div></div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script><script src="js/whatsapp-bot.js"></script>
+</nav></header><section class="page-hero"><div class="container"><h1>Official Reports & Audit Logs (सरकारी रिपोर्ट एवं आंकड़े)</h1><div class="breadcrumb">होम / Government Portal / Reports</div></div></section><main class="content"><div class="container"><div class="grid">
 
-<button class="wa-fab" id="waFab" aria-label="Open Apni BAARI WhatsApp Help" aria-expanded="false" title="अपनी BAARI WhatsApp Help"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></button>
-<div class="wa-window" id="waWindow" role="dialog" aria-label="अपनी BAARI WhatsApp Help">
-  <div class="wa-head"><div class="wa-head-icon"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></div><div class="wa-head-title">अपनी BAARI Help Bot<div class="wa-sub">WhatsApp-style • Click an option, no typing required</div></div><button class="wa-close" id="waClose" aria-label="Close">×</button></div>
-  <div class="wa-body" id="waBody"><div class="wa-bubble bot">नमस्ते! 👋 अपनी BAARI में आपका स्वागत है। नीचे कोई भी विकल्प चुनें — आपको कुछ टाइप करने की जरूरत नहीं है।</div></div>
-  <div class="wa-options"><button class="wa-option" onclick="chooseWhatsApp('status')">🎫 टोकन स्थिति</button><button class="wa-option" onclick="chooseWhatsApp('booking')">📅 टोकन बुक करें</button><button class="wa-option" onclick="chooseWhatsApp('msp')">💰 आज की MSP</button><button class="wa-option" onclick="chooseWhatsApp('weather')">🌧️ मौसम अलर्ट</button><button class="wa-option" onclick="chooseWhatsApp('payment')">🏦 भुगतान स्थिति</button><button class="wa-help" id="waHelp">❓ मदद / Help</button></div>
+<div class="card">
+  <div class="icon">01</div>
+  <h3>Daily Procurement Report</h3>
+  <p>Consolidated center-wise daily arrivals, moisture-tested tonnages, and certified MSP payouts.</p>
+  <div style="margin-top:14px;display:flex;gap:8px">
+    <button class="btn" style="flex:1;padding:8px 12px" onclick="viewDailyReport()">View Online</button>
+    <button class="btn secondary" style="padding:8px 12px" onclick="downloadCsvReport('Daily_Procurement')">📥 CSV</button>
+  </div>
 </div>
-</body></html>
-=======
-</nav></header><section class="page-hero"><div class="container"><h1>Reports</h1><div class="breadcrumb">होम / Government Portal / Reports</div></div></section><main class="content"><div class="container"><div class="grid"><div class="card"><div class="icon">01</div><h3>Daily Procurement Report</h3><p>Center-wise arrivals, procurement and payment initiation.</p><button class="btn" style="margin-top:14px" onclick="openModal('Daily Report','Report preview generated from prototype data.')">View Report</button></div><div class="card"><div class="icon">02</div><h3>Center Performance</h3><p>Capacity utilization, processing rate and waiting time.</p><button class="btn" style="margin-top:14px" onclick="openModal('Center Performance','Karnal 92% · Panipat 74% · Sonipat 52% · Rohtak 86%')">View Report</button></div><div class="card"><div class="icon">03</div><h3>Congestion Summary</h3><p>Overloaded centers and corrective actions taken.</p><button class="btn" style="margin-top:14px" onclick="openModal('Congestion Summary','2 centers require attention in the current demo snapshot.')">View Report</button></div></div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script></body></html>
->>>>>>> 1c1333f0e82d5f6d609f4c7bf80c342c7faa9e81
+
+<div class="card">
+  <div class="icon">02</div>
+  <h3>Center Performance & SLAs</h3>
+  <p>Capacity utilization %, weighbridge turnaround speeds, and bottleneck indicators.</p>
+  <div style="margin-top:14px;display:flex;gap:8px">
+    <button class="btn" style="flex:1;padding:8px 12px" onclick="viewPerformanceReport()">View Online</button>
+    <button class="btn secondary" style="padding:8px 12px" onclick="downloadCsvReport('Center_Performance')">📥 CSV</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="icon">03</div>
+  <h3>Congestion & Redirection Log</h3>
+  <p>Audit trail of algorithmic slot reallocations executed by the Smart Decision Engine.</p>
+  <div style="margin-top:14px;display:flex;gap:8px">
+    <button class="btn" style="flex:1;padding:8px 12px" onclick="viewRedirectionReport()">View Online</button>
+    <button class="btn secondary" style="padding:8px 12px" onclick="downloadCsvReport('Redirections')">📥 CSV</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="icon">04</div>
+  <h3>DBT Direct Payment Ledger</h3>
+  <p>PFMS / NPCI bank transaction ledger containing farmer accounts, Aadhaar links, and bank UTRs.</p>
+  <div style="margin-top:14px;display:flex;gap:8px">
+    <button class="btn" style="flex:1;padding:8px 12px" onclick="viewDbtLedger()">View Online</button>
+    <button class="btn secondary" style="padding:8px 12px" onclick="downloadCsvReport('DBT_Ledger')">📥 CSV</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="icon">05</div>
+  <h3>AGMARK Quality Compliance</h3>
+  <p>Moisture distribution curves, FAQ pass percentages, and aggregate deduction reconciliations.</p>
+  <div style="margin-top:14px;display:flex;gap:8px">
+    <button class="btn" style="flex:1;padding:8px 12px" onclick="viewQualityAudit()">View Online</button>
+    <button class="btn secondary" style="padding:8px 12px" onclick="downloadCsvReport('Quality_Compliance')">📥 CSV</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="icon">06</div>
+  <h3>Grievance & Redressal Status</h3>
+  <p>Summary of farmer token queries, weighbridge disputes, and resolution timeframes.</p>
+  <div style="margin-top:14px;display:flex;gap:8px">
+    <button class="btn" style="flex:1;padding:8px 12px" onclick="viewGrievanceReport()">View Online</button>
+    <button class="btn secondary" style="padding:8px 12px" onclick="downloadCsvReport('Grievances')">📥 CSV</button>
+  </div>
+</div>
+
+</div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script><script src="js/api-client.js"></script><script>
+function viewDailyReport() {
+  const bodyHtml = `
+    <div style="line-height:1.7;font-size:14px">
+      <table style="width:100%;border-collapse:collapse;margin-top:10px;font-size:13px">
+        <thead>
+          <tr style="background:#f1effb;border-bottom:2px solid #ccc;text-align:left">
+            <th style="padding:8px">Mandi Hub</th>
+            <th style="padding:8px">Arrivals</th>
+            <th style="padding:8px">Procured (qtl)</th>
+            <th style="padding:8px">Total Value</th>
+            <th style="padding:8px">Payments Settled</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #eee"><td style="padding:8px"><strong>Karnal Hub</strong></td><td style="padding:8px">284</td><td style="padding:8px">12,780</td><td style="padding:8px">₹2,90,74,500</td><td style="padding:8px;color:#2f7d32;font-weight:700">268 (94%)</td></tr>
+          <tr style="border-bottom:1px solid #eee"><td style="padding:8px"><strong>Panipat Hub</strong></td><td style="padding:8px">210</td><td style="padding:8px">9,450</td><td style="padding:8px">₹2,14,98,750</td><td style="padding:8px;color:#2f7d32;font-weight:700">202 (96%)</td></tr>
+          <tr style="border-bottom:1px solid #eee"><td style="padding:8px"><strong>Sonipat Center</strong></td><td style="padding:8px">142</td><td style="padding:8px">6,390</td><td style="padding:8px">₹1,45,37,250</td><td style="padding:8px;color:#2f7d32;font-weight:700">139 (98%)</td></tr>
+          <tr style="border-bottom:1px solid #eee"><td style="padding:8px"><strong>Rohtak Center</strong></td><td style="padding:8px">189</td><td style="padding:8px">8,505</td><td style="padding:8px">₹1,93,48,875</td><td style="padding:8px;color:#2f7d32;font-weight:700">181 (95%)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+  openModal('Daily Procurement Summary (2026-09-06)', bodyHtml);
+}
+
+function viewPerformanceReport() {
+  openModal('Center SLA & Throughput Report', `
+    <div style="line-height:1.7;font-size:14px">
+      <p><strong>Total Active Procurement Hubs:</strong> 8 centers across 5 states</p>
+      <p><strong>Overall Capacity Utilization:</strong> 76.4% (Nominal)</p>
+      <p><strong>Average Waiting Time:</strong> 42 minutes (Benchmark SLA: &lt;60 minutes)</p>
+      <p><strong>Weighbridge Speed:</strong> 13.8 minutes per tractor</p>
+      <p style="color:#2f7d32;font-weight:700">✓ 98.4% of arrivals processed within scheduled slot window.</p>
+    </div>
+  `);
+}
+
+function viewRedirectionReport() {
+  openModal('Smart Decision Engine Congestion Audit', `
+    <div style="line-height:1.8;font-size:14px">
+      <div style="background:#f9f9fc;padding:12px;border:1px solid #dedee8;border-radius:6px;margin-bottom:10px">
+        <strong>Batch #RED-20260906-01:</strong> 20 Slots shifted from Karnal Hub to Panipat Hub.<br>
+        <span style="color:var(--muted)">Trigger: Real-time queue length crossed 85 vehicles at 10:45 AM.</span>
+      </div>
+      <div style="background:#f9f9fc;padding:12px;border:1px solid #dedee8;border-radius:6px">
+        <strong>Weather Contingency #WTH-04:</strong> 15 Slots redirected from Rohtak Center due to heavy precipitation alert.<br>
+        <span style="color:var(--muted)">Farmers notified with revised digital entry passes and fuel allowance subsidy.</span>
+      </div>
+    </div>
+  `);
+}
+
+function viewDbtLedger() {
+  openModal('Direct Benefit Transfer (DBT) Ledger', `
+    <div style="line-height:1.7;font-size:14px">
+      <p><strong>Today's Disbursal:</strong> ₹8,44,59,375 across 790 beneficiary farmers</p>
+      <p><strong>Gateway:</strong> PFMS / Public Financial Management System (Aadhaar Payment Bridge)</p>
+      <p><strong>Success Rate:</strong> 100% direct bank credit (Zero intermediary deductions)</p>
+      <p><strong>Average Disbursal Latency:</strong> 2.4 hours post J-Form issuance</p>
+    </div>
+  `);
+}
+
+function viewQualityAudit() {
+  openModal('AGMARK Grain Quality Compliance', `
+    <div style="line-height:1.7;font-size:14px">
+      <p><strong>Samples Tested Today:</strong> 826 grain lots</p>
+      <p><strong>Grade A (Premium MSP):</strong> 714 lots (86.4%)</p>
+      <p><strong>FAQ (Standard MSP):</strong> 108 lots (13.1%)</p>
+      <p><strong>Substandard / Rejected:</strong> 4 lots (0.5%)</p>
+      <p><strong>Average Moisture:</strong> 11.2% (Permissible ceiling: 12.0%)</p>
+    </div>
+  `);
+}
+
+function viewGrievanceReport() {
+  openModal('Farmer Grievance & Redressal Matrix', `
+    <div style="line-height:1.7;font-size:14px">
+      <p><strong>Tickets Logged Today:</strong> 12 inquiries</p>
+      <p><strong>Resolved Immediately:</strong> 10 tickets (83%)</p>
+      <p><strong>Pending Review:</strong> 2 tickets (Assigned to District Nodal Officer)</p>
+      <p><strong>Average Resolution Time:</strong> 18 minutes</p>
+    </div>
+  `);
+}
+
+function downloadCsvReport(reportType) {
+  const dummyCsv = `Report_Type,Timestamp,Center,Total_Procured_Qtl,Total_Value_INR,Status\n${reportType},${new Date().toISOString()},Karnal Hub,12780,29074500,VERIFIED\n${reportType},${new Date().toISOString()},Panipat Hub,9450,21498750,VERIFIED\n`;
+  const blob = new Blob([dummyCsv], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `ApniBaari_${reportType}_${new Date().toISOString().slice(0,10)}.csv`;
+  link.click();
+  ApniBaariAPI.showToast(`Exported ${reportType} CSV successfully`, 'success');
+}
+</script></body></html>

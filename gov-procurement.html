@@ -1,26 +1,440 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Procurement | किसान सूचना एवं सेवा पोर्टल</title><link rel="stylesheet" href="gov-style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Procurement Operations | किसान सूचना एवं सेवा पोर्टल</title><link rel="stylesheet" href="gov-style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<<<<<<< HEAD
-<link rel="stylesheet" href="css/whatsapp-bot.css">
-=======
->>>>>>> 1c1333f0e82d5f6d609f4c7bf80c342c7faa9e81
+<style>
+.tab-btn{background:#eef0fb;border:1px solid #d4d7ed;padding:10px 18px;border-radius:6px 6px 0 0;font-weight:700;color:var(--navy);cursor:pointer;border-bottom:none;margin-right:4px}
+.tab-btn.active{background:#fff;border-color:var(--indigo);border-top:3px solid var(--orange);color:var(--indigo)}
+.tab-content{background:#fff;border:1px solid #d4d7ed;padding:24px;border-radius:0 8px 8px 8px;margin-bottom:24px}
+</style>
 </head><body><header>
 <div class="utility"><div class="container utility-inner"><div><strong>भारत सरकार</strong> | Government of India</div><div class="utility-right"><a href="#">स्क्रीन रीडर</a><a href="#">A-</a><a href="#">A</a><a href="#">A+</a><a href="#">हिंदी / English</a></div></div></div>
 <div class="branding"><div class="container branding-inner"><a href="gov-dashboard.html"><img class="logo" src="assets/gov-logo.png" alt="कृषि भारत लोगो"></a><div class="brand-divider"></div><div class="brand-copy"><div class="tagline">हर किसान की बारी, सही समय की जानकारी</div><div class="department">किसान सूचना एवं सेवा पोर्टल</div><div class="department"><span>Ministry of Consumer Affairs, Food and Public Distribution</span></div></div><div class="search-box"><input id="globalSearch" type="search" placeholder="Search Services" aria-label="Search Services"><button onclick="searchPage()" aria-label="Search">⌕</button></div></div></div>
 <nav class="navbar"><div class="container nav-inner"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="nav-links"><a href="gov-dashboard.html" class="">Dashboard</a><a href="gov-live-centers.html" class="">Live Centers</a><a href="gov-queue-management.html" class="">Queue Management</a><a href="gov-slot-management.html" class="">Slot Management</a><a href="gov-procurement.html" class="active">Procurement</a><a href="gov-analytics.html" class="">Analytics</a><a href="gov-reports.html" class="">Reports</a><a href="gov-notifications.html" class="">Notifications</a><a href="gov-settings.html" class="">Settings</a></div></div>
-<<<<<<< HEAD
-</nav>
-<div class="price-ticker" id="latest-price-bar" role="region" aria-label="Latest MSP prices"><div class="price-ticker-track"><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong><strong>अपनी BAARI • किसान मूल्य सूचना</strong><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong></div></div>
-</header><section class="page-hero"><div class="container"><h1>Procurement</h1><div class="breadcrumb">होम / Government Portal / Procurement</div></div></section><main class="content"><div class="container"><div class="stats"><div class="stat"><div class="num">672</div><p>Accepted Today</p></div><div class="stat"><div class="num">641</div><p>Payment Initiated</p></div><div class="stat"><div class="num">748</div><p>Quality Verified</p></div><div class="stat"><div class="num">936</div><p>Arrived</p></div></div><div class="panel" style="margin-top:22px"><h2>Procurement Records</h2><div class="filter-row"><input placeholder="Search farmer / token / center"><select><option>All Status</option><option>Accepted</option><option>Quality Verified</option><option>Payment Initiated</option></select></div><div class="table-wrap"><table><thead><tr><th>Token</th><th>Center</th><th>Farmer</th><th>Crop</th><th>Estimated Load</th><th>Procurement</th><th>Payment</th></tr></thead><tbody><tr><td>KRN-0191</td><td>Karnal</td><td>Farmer 1042</td><td>Wheat</td><td>4.2 T</td><td>Accepted</td><td class="status-normal">Initiated</td></tr><tr><td>PNT-0087</td><td>Panipat</td><td>Farmer 0861</td><td>Wheat</td><td>3.1 T</td><td>Quality Verified</td><td>Pending</td></tr><tr><td>SNP-0042</td><td>Sonipat</td><td>Farmer 2208</td><td>Paddy</td><td>2.8 T</td><td>Accepted</td><td class="status-normal">Initiated</td></tr></tbody></table></div><p class="small-note">Prototype/demo records only. Official weighment remains the authoritative procurement weight.</p></div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><script src="gov-script.js"></script><script src="js/whatsapp-bot.js"></script>
+</nav></header><section class="page-hero"><div class="container"><h1>Procurement Operations (खरीद एवं तौल केंद्र)</h1><div class="breadcrumb">होम / Government Portal / Procurement</div></div></section><main class="content"><div class="container">
 
-<button class="wa-fab" id="waFab" aria-label="Open Apni BAARI WhatsApp Help" aria-expanded="false" title="अपनी BAARI WhatsApp Help"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></button>
-<div class="wa-window" id="waWindow" role="dialog" aria-label="अपनी BAARI WhatsApp Help">
-  <div class="wa-head"><div class="wa-head-icon"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></div><div class="wa-head-title">अपनी BAARI Help Bot<div class="wa-sub">WhatsApp-style • Click an option, no typing required</div></div><button class="wa-close" id="waClose" aria-label="Close">×</button></div>
-  <div class="wa-body" id="waBody"><div class="wa-bubble bot">नमस्ते! 👋 अपनी BAARI में आपका स्वागत है। नीचे कोई भी विकल्प चुनें — आपको कुछ टाइप करने की जरूरत नहीं है।</div></div>
-  <div class="wa-options"><button class="wa-option" onclick="chooseWhatsApp('status')">🎫 टोकन स्थिति</button><button class="wa-option" onclick="chooseWhatsApp('booking')">📅 टोकन बुक करें</button><button class="wa-option" onclick="chooseWhatsApp('msp')">💰 आज की MSP</button><button class="wa-option" onclick="chooseWhatsApp('weather')">🌧️ मौसम अलर्ट</button><button class="wa-option" onclick="chooseWhatsApp('payment')">🏦 भुगतान स्थिति</button><button class="wa-help" id="waHelp">❓ मदद / Help</button></div>
+<div class="stats">
+  <div class="stat"><div class="num" id="kpiAccepted">672</div><p>Accepted Today</p></div>
+  <div class="stat"><div class="num" id="kpiPayment">641</div><p>Payment Initiated</p></div>
+  <div class="stat"><div class="num" id="kpiQuality">748</div><p>Quality Verified</p></div>
+  <div class="stat"><div class="num" id="kpiArrived">936</div><p>Arrived at Mandi</p></div>
 </div>
-</body></html>
-=======
-</nav></header><section class="page-hero"><div class="container"><h1>Procurement</h1><div class="breadcrumb">होम / Government Portal / Procurement</div></div></section><main class="content"><div class="container"><div class="stats"><div class="stat"><div class="num">672</div><p>Accepted Today</p></div><div class="stat"><div class="num">641</div><p>Payment Initiated</p></div><div class="stat"><div class="num">748</div><p>Quality Verified</p></div><div class="stat"><div class="num">936</div><p>Arrived</p></div></div><div class="panel" style="margin-top:22px"><h2>Procurement Records</h2><div class="filter-row"><input placeholder="Search farmer / token / center"><select><option>All Status</option><option>Accepted</option><option>Quality Verified</option><option>Payment Initiated</option></select></div><div class="table-wrap"><table><thead><tr><th>Token</th><th>Center</th><th>Farmer</th><th>Crop</th><th>Estimated Load</th><th>Procurement</th><th>Payment</th></tr></thead><tbody><tr><td>KRN-0191</td><td>Karnal</td><td>Farmer 1042</td><td>Wheat</td><td>4.2 T</td><td>Accepted</td><td class="status-normal">Initiated</td></tr><tr><td>PNT-0087</td><td>Panipat</td><td>Farmer 0861</td><td>Wheat</td><td>3.1 T</td><td>Quality Verified</td><td>Pending</td></tr><tr><td>SNP-0042</td><td>Sonipat</td><td>Farmer 2208</td><td>Paddy</td><td>2.8 T</td><td>Accepted</td><td class="status-normal">Initiated</td></tr></tbody></table></div><p class="small-note">Prototype/demo records only. Official weighment remains the authoritative procurement weight.</p></div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><script src="gov-script.js"></script></body></html>
->>>>>>> 1c1333f0e82d5f6d609f4c7bf80c342c7faa9e81
+
+<div style="margin-top:28px">
+  <div style="display:flex">
+    <button class="tab-btn active" onclick="switchProcTab('tab-weigh', this)">⚖ 1. Electronic Weighbridge</button>
+    <button class="tab-btn" onclick="switchProcTab('tab-quality', this)">🌾 2. AI Quality Inspection</button>
+    <button class="tab-btn" onclick="switchProcTab('tab-bay', this)">🏗 3. Unloading Bay & Silo</button>
+    <button class="tab-btn" onclick="switchProcTab('tab-jform', this)">📄 4. J-Form & DBT Payment</button>
+  </div>
+
+  <!-- TAB 1: WEIGHBRIDGE -->
+  <div id="tab-weigh" class="tab-content">
+    <h3 style="margin-top:0;color:var(--navy)">Weighbridge Operator Console (कांटा पर्ची)</h3>
+    <div class="form-grid">
+      <div class="field">
+        <label>Token ID</label>
+        <input id="wbToken" placeholder="e.g. AB-2026-9874" value="AB-2026-9874">
+      </div>
+      <div class="field">
+        <label>Scale ID</label>
+        <select id="wbScaleId">
+          <option value="WB-01">Weighbridge Scale 1 (Gross Inbound)</option>
+          <option value="WB-02">Weighbridge Scale 2 (Tare Outbound)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Gross Weight (Tractor + Crop in kg)</label>
+        <input id="wbGross" type="number" placeholder="e.g. 7450" value="7450" oninput="calcNetWeight()">
+      </div>
+      <div class="field">
+        <label>Tare Weight (Empty Vehicle in kg)</label>
+        <input id="wbTare" type="number" placeholder="e.g. 2650" value="2650" oninput="calcNetWeight()">
+      </div>
+      <div class="field full">
+        <div style="background:#f1effb;padding:12px 18px;border-radius:6px;border:1px solid #d4d7ed">
+          <span style="font-size:15px;color:var(--navy)">Calculated Net Crop Weight: </span>
+          <strong id="wbNetDisplay" style="font-size:18px;color:#2f7d32">4,800 kg (48.00 Quintals)</strong>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:16px;display:flex;gap:12px">
+      <button class="btn" onclick="submitWeighment()">Record Official Weighment Slip</button>
+    </div>
+  </div>
+
+  <!-- TAB 2: AI QUALITY INSPECTION -->
+  <div id="tab-quality" class="tab-content" style="display:none">
+    <h3 style="margin-top:0;color:var(--navy)">AI Grain Quality Inspection & Moisture Analyzer</h3>
+    <div class="form-grid">
+      <div class="field">
+        <label>Token ID</label>
+        <input id="qualToken" placeholder="e.g. AB-2026-9874" value="AB-2026-9874">
+      </div>
+      <div class="field">
+        <label>Moisture Content (%) - FAQ Limit: 12.0%</label>
+        <input id="qualMoisture" type="number" step="0.1" value="11.4">
+      </div>
+      <div class="field">
+        <label>Foreign Matter (%) - Max: 0.75%</label>
+        <input id="qualForeign" type="number" step="0.05" value="0.45">
+      </div>
+      <div class="field">
+        <label>Broken / Shriveled Grains (%) - Max: 4.0%</label>
+        <input id="qualBroken" type="number" step="0.1" value="1.8">
+      </div>
+      <div class="field">
+        <label>AI Optical Quality Camera Feed</label>
+        <select id="qualSampleSelect">
+          <option value="SAMPLE_A">Standard Wheat Specimen A - FAQ Grade</option>
+          <option value="SAMPLE_B">Standard Wheat Specimen B - Premium Grade A</option>
+        </select>
+      </div>
+    </div>
+    <div style="margin-top:16px;display:flex;gap:12px">
+      <button class="btn green" onclick="submitQualityInspection()">Run AI Quality Analysis & Generate Certificate</button>
+    </div>
+  </div>
+
+  <!-- TAB 3: UNLOADING BAY -->
+  <div id="tab-bay" class="tab-content" style="display:none">
+    <h3 style="margin-top:0;color:var(--navy)">Unloading Bay Dispatch & Godown Stacking</h3>
+    <div class="form-grid">
+      <div class="field">
+        <label>Token ID</label>
+        <input id="bayToken" placeholder="e.g. AB-2026-9874" value="AB-2026-9874">
+      </div>
+      <div class="field">
+        <label>Assigned Unloading Bay</label>
+        <select id="baySelect">
+          <option value="1">Bay #1 (Pneumatic Grain Unloader)</option>
+          <option value="2">Bay #2 (Gravity Pit 1)</option>
+          <option value="3">Bay #3 (Gravity Pit 2)</option>
+          <option value="4">Bay #4 (Manual Bag Stack)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Destination Silo / Storage Godown</label>
+        <select id="siloSelect">
+          <option value="SILO-KRN-A">FCI Steel Silo 1 - Karnal</option>
+          <option value="SILO-KRN-B">FCI Steel Silo 2 - Karnal</option>
+          <option value="GODOWN-04">CWC Covered Warehouse 4</option>
+        </select>
+      </div>
+    </div>
+    <div style="margin-top:16px;display:flex;gap:12px">
+      <button class="btn" onclick="submitBayAssignment()">Assign Bay & Signal Vehicle</button>
+    </div>
+  </div>
+
+  <!-- TAB 4: J-FORM & DBT -->
+  <div id="tab-jform" class="tab-content" style="display:none">
+    <h3 style="margin-top:0;color:var(--navy)">Digital J-Form Issuance & Direct Benefit Transfer (DBT)</h3>
+    <div class="form-grid">
+      <div class="field">
+        <label>Token ID</label>
+        <input id="jformToken" placeholder="e.g. AB-2026-9874" value="AB-2026-9874">
+      </div>
+    </div>
+    <div style="margin-top:16px;display:flex;gap:12px">
+      <button class="btn" onclick="generateJFormAction()">Issue Certified Digital J-Form (जे-फॉर्म जारी करें)</button>
+      <button class="btn green" onclick="initiateDbtAction()">Initiate Instant DBT Bank Transfer (भुगतान भेजें)</button>
+    </div>
+  </div>
+</div>
+
+<div class="panel" style="margin-top:22px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+    <div>
+      <h2 style="margin:0;color:var(--navy)">Procurement Records & Stage Tracking</h2>
+      <p style="margin:4px 0 0;color:var(--muted);font-size:14px">Real-time status of farmers currently passing through procurement stages.</p>
+    </div>
+    <button class="btn secondary" onclick="loadProcurementRecords()" style="padding:6px 14px">↻ Refresh Records</button>
+  </div>
+  <div class="filter-row">
+    <input id="procSearch" placeholder="Search farmer, token, crop, or center..." onkeyup="filterProcRecords()">
+    <select id="procFilter" onchange="filterProcRecords()">
+      <option value="ALL">All Status</option>
+      <option value="COMPLETED">Procurement Completed</option>
+      <option value="WEIGHMENT_GROSS">Gross Weighment</option>
+      <option value="QUALITY_CHECK">Quality Testing</option>
+      <option value="UNLOADING_BAY">Unloading Bay</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Token ID</th>
+          <th>Center</th>
+          <th>Farmer Name</th>
+          <th>Crop</th>
+          <th>Net Weight</th>
+          <th>Stage Status</th>
+          <th>Payment Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="procTableBody">
+        <tr><td colspan="8" style="text-align:center;padding:24px;color:var(--muted)">Loading procurement records...</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small-note">Official weighbridge scale and AI grade determination constitute final certified record.</p>
+</div>
+
+</div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script><script src="js/api-client.js"></script><script>
+let allProcRecords = [];
+
+function switchProcTab(tabId, btn) {
+  document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  const target = document.getElementById(tabId);
+  if (target) target.style.display = 'block';
+  btn.classList.add('active');
+}
+
+function calcNetWeight() {
+  const g = parseFloat(document.getElementById('wbGross')?.value) || 0;
+  const t = parseFloat(document.getElementById('wbTare')?.value) || 0;
+  const netKg = Math.max(0, g - t);
+  const netQtl = (netKg / 100).toFixed(2);
+  const disp = document.getElementById('wbNetDisplay');
+  if (disp) disp.innerText = `${netKg.toLocaleString('en-IN')} kg (${netQtl} Quintals)`;
+}
+
+async function loadProcurementRecords() {
+  try {
+    const summary = await ApniBaariAPI.getOfficerDashboard();
+    if (summary && summary.stats) {
+      document.getElementById('kpiAccepted').innerText = summary.stats.accepted_today.toLocaleString('en-IN');
+      document.getElementById('kpiPayment').innerText = summary.stats.payments_initiated.toLocaleString('en-IN');
+      document.getElementById('kpiQuality').innerText = summary.stats.quality_verified.toLocaleString('en-IN');
+      document.getElementById('kpiArrived').innerText = summary.stats.arrivals_today.toLocaleString('en-IN');
+    }
+
+    const qRes = await ApniBaariAPI.getQueueStatus('CTR-KRN');
+    allProcRecords = qRes.active_queue || [];
+    renderProcTable(allProcRecords);
+  } catch (err) {
+    console.error('Procurement records load error:', err);
+  }
+}
+
+function renderProcTable(list) {
+  const tbody = document.getElementById('procTableBody');
+  if (!list || list.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--muted)">No records found.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = list.map(item => {
+    let pClass = 'status-normal';
+    let pText = 'Initiated';
+    if (item.status === 'COMPLETED') {
+      pText = 'Disbursed (UTR Issued)';
+      pClass = 'status-normal';
+    } else if (item.status === 'WEIGHMENT_GROSS' || item.status === 'GATE_ARRIVED') {
+      pText = 'Pending Weighment';
+      pClass = 'status-high';
+    }
+
+    return `<tr>
+      <td><strong>${item.token_number}</strong></td>
+      <td>Karnal Hub</td>
+      <td><strong>${item.farmer_name}</strong></td>
+      <td>${item.crop_name}</td>
+      <td><strong>${item.estimated_quantity || 45} qtl</strong></td>
+      <td><span class="status-normal">${item.status}</span></td>
+      <td><span class="${pClass}">${pText}</span></td>
+      <td>
+        <button class="btn secondary" style="padding:4px 10px;font-size:12px" onclick="fillTokenFields('${item.token_number}')">Load Into Console</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function filterProcRecords() {
+  const q = (document.getElementById('procSearch')?.value || '').toLowerCase();
+  const f = (document.getElementById('procFilter')?.value || 'ALL');
+
+  const filtered = allProcRecords.filter(item => {
+    const text = `${item.token_number} ${item.farmer_name} ${item.crop_name}`.toLowerCase();
+    const okQ = !q || text.includes(q);
+    const okF = (f === 'ALL') || (item.status === f);
+    return okQ && okF;
+  });
+
+  renderProcTable(filtered);
+}
+
+function fillTokenFields(token) {
+  document.getElementById('wbToken').value = token;
+  document.getElementById('qualToken').value = token;
+  document.getElementById('bayToken').value = token;
+  document.getElementById('jformToken').value = token;
+  ApniBaariAPI.showToast(`Loaded token ${token} into operator forms`, 'info');
+  window.scrollTo({ top: 350, behavior: 'smooth' });
+}
+
+async function submitWeighment() {
+  const token = document.getElementById('wbToken')?.value.trim();
+  const gross = parseFloat(document.getElementById('wbGross')?.value) || 0;
+  const tare = parseFloat(document.getElementById('wbTare')?.value) || 0;
+  const scale = document.getElementById('wbScaleId')?.value;
+
+  if (!token) {
+    ApniBaariAPI.showToast('Please provide a Token Number', 'error');
+    return;
+  }
+
+  try {
+    const res = await ApniBaariAPI.recordWeighment(token, gross, tare, scale);
+    ApniBaariAPI.showToast(`Weighment recorded! Net Weight: ${res.net_weight_quintals} qtl`, 'success');
+    openModal('Official Weighment Slip Generated', `
+      <div style="line-height:1.8">
+        <div style="background:#f0fff4;border:1px solid #2f7d32;padding:12px;border-radius:6px;margin-bottom:12px">
+          <strong style="color:#2f7d32">✓ Weighbridge Slip WB-${Date.now().toString().slice(-6)}</strong>
+        </div>
+        <p><strong>Token Number:</strong> ${res.token_number}</p>
+        <p><strong>Gross Weight:</strong> ${gross.toLocaleString()} kg</p>
+        <p><strong>Tare Weight:</strong> ${tare.toLocaleString()} kg</p>
+        <p><strong>Net Crop Weight:</strong> <span style="font-size:18px;color:#2f7d32;font-weight:700">${res.net_weight_quintals} Quintals</span></p>
+        <p><strong>Weighbridge Operator ID:</strong> WB-OP-04</p>
+        <p style="color:var(--muted);font-size:13px">Vehicle flagged ready for AI Grain Quality Inspection.</p>
+      </div>
+    `);
+    loadProcurementRecords();
+  } catch (err) {
+    ApniBaariAPI.showToast('Weighment failed: ' + err.message, 'error');
+  }
+}
+
+async function submitQualityInspection() {
+  const token = document.getElementById('qualToken')?.value.trim();
+  const moisture = parseFloat(document.getElementById('qualMoisture')?.value) || 11.4;
+  const foreign = parseFloat(document.getElementById('qualForeign')?.value) || 0.45;
+  const broken = parseFloat(document.getElementById('qualBroken')?.value) || 1.8;
+
+  if (!token) {
+    ApniBaariAPI.showToast('Please provide a Token Number', 'error');
+    return;
+  }
+
+  try {
+    const res = await ApniBaariAPI.submitQualityInspection(token, moisture, foreign, broken);
+    ApniBaariAPI.showToast(`Quality Certificate Generated! Grade: ${res.grade}`, 'success');
+    openModal('AI Grain Quality Certificate', `
+      <div style="line-height:1.8">
+        <div style="background:#f1effb;border:1px solid var(--indigo);padding:14px;border-radius:6px;margin-bottom:12px">
+          <strong style="color:var(--indigo);font-size:16px">AGMARK Certified Grade: ${res.grade}</strong>
+        </div>
+        <p><strong>Token Number:</strong> ${res.token_number}</p>
+        <p><strong>Moisture Level:</strong> ${res.moisture_percentage}% (Limit 12.0%)</p>
+        <p><strong>Foreign Matter:</strong> ${res.foreign_matter_percentage}% (Limit 0.75%)</p>
+        <p><strong>Broken / Shriveled Grains:</strong> ${res.broken_grains_percentage}% (Limit 4.0%)</p>
+        <p><strong>Price Deduction / Adjustment:</strong> ₹${res.deduction_rupees || 0} / qtl</p>
+        <p style="color:#2f7d32;font-weight:700">✓ Quality approved for Government Central Pool Buffer.</p>
+      </div>
+    `);
+    loadProcurementRecords();
+  } catch (err) {
+    ApniBaariAPI.showToast('Quality inspection error: ' + err.message, 'error');
+  }
+}
+
+async function submitBayAssignment() {
+  const token = document.getElementById('bayToken')?.value.trim();
+  const bay = parseInt(document.getElementById('baySelect')?.value) || 1;
+  const silo = document.getElementById('siloSelect')?.value;
+
+  if (!token) {
+    ApniBaariAPI.showToast('Please provide a Token Number', 'error');
+    return;
+  }
+
+  try {
+    const res = await ApniBaariAPI.assignUnloadingBay(token, bay, silo);
+    ApniBaariAPI.showToast(`Assigned Bay #${bay} to Token ${token}`, 'success');
+    openModal('Unloading Bay Assigned', `
+      <div style="line-height:1.8">
+        <p><strong>Token:</strong> ${token}</p>
+        <p><strong>Designated Bay:</strong> <span style="font-size:18px;font-weight:700;color:var(--navy)">Bay #${bay}</span></p>
+        <p><strong>Storage Silo:</strong> ${silo}</p>
+        <p style="color:#2f7d32;font-weight:700">✓ SMS gate notification and electronic bay display beacon triggered.</p>
+      </div>
+    `);
+    loadProcurementRecords();
+  } catch (err) {
+    ApniBaariAPI.showToast('Bay assignment failed: ' + err.message, 'error');
+  }
+}
+
+async function generateJFormAction() {
+  const token = document.getElementById('jformToken')?.value.trim();
+  if (!token) {
+    ApniBaariAPI.showToast('Please provide a Token Number', 'error');
+    return;
+  }
+
+  try {
+    const res = await ApniBaariAPI.generateJForm(token);
+    ApniBaariAPI.showToast(`J-Form ${res.j_form_number} Issued Successfully!`, 'success');
+    openModal(`Certified J-Form: ${res.j_form_number}`, `
+      <div style="font-family:monospace;background:#f9f9fc;padding:16px;border:1px solid #dedee8;border-radius:6px;line-height:1.6">
+        <div style="text-align:center;border-bottom:1px solid #ccc;padding-bottom:8px;margin-bottom:8px">
+          <strong>GOVERNMENT OF INDIA - MINISTRY OF CONSUMER AFFAIRS</strong><br>
+          FORM 'J' - OFFICIAL CROP SALE RECORD (जे-फॉर्म)
+        </div>
+        <div>J-FORM NUMBER: <strong>${res.j_form_number}</strong></div>
+        <div>TOKEN NUMBER: <strong>${res.token_number}</strong></div>
+        <div>FARMER: <strong>${res.farmer_name}</strong> (FID: ${res.farmer_id})</div>
+        <div>CROP: <strong>${res.crop_name}</strong></div>
+        <div>NET QUANTITY: <strong>${res.net_quantity_quintals} Quintals</strong></div>
+        <div>GOVERNMENT MSP RATE: <strong>₹${res.rate_per_quintal.toLocaleString('en-IN')} / qtl</strong></div>
+        <div style="border-top:1px solid #ccc;margin-top:8px;padding-top:8px;font-size:16px">
+          TOTAL AMOUNT PAYABLE: <strong style="color:#2f7d32">₹${res.total_amount.toLocaleString('en-IN')}</strong>
+        </div>
+        <div style="color:var(--muted);font-size:11px;margin-top:10px">
+          Digitally certified by Karnal Procurement Hub. Eligible for immediate direct DBT transfer.
+        </div>
+      </div>
+    `);
+  } catch (err) {
+    ApniBaariAPI.showToast('J-Form generation error: ' + err.message, 'error');
+  }
+}
+
+async function initiateDbtAction() {
+  const token = document.getElementById('jformToken')?.value.trim();
+  if (!token) {
+    ApniBaariAPI.showToast('Please provide a Token Number', 'error');
+    return;
+  }
+
+  try {
+    const res = await ApniBaariAPI.initiateDbtPayment(token);
+    ApniBaariAPI.showToast(`DBT Payment of ₹${res.amount.toLocaleString('en-IN')} Disbursed! UTR: ${res.utr_number}`, 'success');
+    openModal('DBT Payment Disbursed', `
+      <div style="line-height:1.8">
+        <div style="background:#f0fff4;border:1px solid #2f7d32;padding:14px;border-radius:6px;margin-bottom:12px">
+          <strong style="color:#2f7d32;font-size:16px">✓ Direct Benefit Transfer (DBT) Successful</strong>
+        </div>
+        <p><strong>Payment Reference ID:</strong> ${res.payment_id}</p>
+        <p><strong>Bank UTR Number:</strong> <span style="font-family:monospace;font-weight:700;color:var(--navy)">${res.utr_number}</span></p>
+        <p><strong>Beneficiary Account:</strong> ${res.bank_account}</p>
+        <p><strong>IFSC Code:</strong> ${res.ifsc_code}</p>
+        <p><strong>Total MSP Amount:</strong> <strong style="font-size:18px;color:#2f7d32">₹${res.amount.toLocaleString('en-IN')}</strong></p>
+        <p style="color:var(--muted);font-size:13px">NPCI / PFMS transaction status: SETTLED. SMS acknowledgment sent to registered mobile.</p>
+      </div>
+    `);
+    loadProcurementRecords();
+  } catch (err) {
+    ApniBaariAPI.showToast('DBT initiation error: ' + err.message, 'error');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadProcurementRecords();
+  calcNetWeight();
+});
+</script></body></html>

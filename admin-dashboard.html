@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Central Admin Portal | अपनी बारी - किसान सूचना एवं सेवा पोर्टल</title><link rel="stylesheet" href="gov-style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head><body><header>
+<div class="utility"><div class="container utility-inner"><div><strong>भारत सरकार</strong> | Government of India - Central Administration</div><div class="utility-right"><a href="#">स्क्रीन रीडर</a><a href="#">A-</a><a href="#">A</a><a href="#">A+</a><a href="#">हिंदी / English</a><span style="background:#bd4a1b;padding:2px 8px;border-radius:4px;font-weight:700">SUPER ADMIN</span></div></div></div>
+<div class="branding"><div class="container branding-inner"><a href="admin-dashboard.html"><img class="logo" src="assets/gov-logo.png" alt="कृषि भारत लोगो"></a><div class="brand-divider"></div><div class="brand-copy"><div class="tagline">हर किसान की बारी, सही समय की जानकारी</div><div class="department">केंद्रीय प्रशासनिक नियंत्रण कक्ष (Central Admin Portal)</div><div class="department"><span>Ministry of Consumer Affairs, Food and Public Distribution</span></div></div><div class="search-box"><input id="globalSearch" type="search" placeholder="Search Master Records" aria-label="Search"><button onclick="searchPage()" aria-label="Search">⌕</button></div></div></div>
+<nav class="navbar"><div class="container nav-inner"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="nav-links"><a href="admin-dashboard.html" class="active">Admin Dashboard</a><a href="admin-approvals.html" class="">Farmer KYC Queue</a><a href="admin-masters.html" class="">Mandi & MSP Masters</a><a href="admin-officers.html" class="">Officer Accounts</a><a href="admin-audit.html" class="">Audit Trail</a><a href="gov-dashboard.html" class="">Officer Portal &gt;</a><a href="#" onclick="adminLogout()" style="color:#bd4a1b">Sign Out</a></div></div>
+</nav></header><section class="page-hero"><div class="container"><h1>National Procurement System Dashboard</h1><div class="breadcrumb">होम / Central Admin Portal / Overview</div></div></section><main class="content"><div class="container">
+
+<div class="stats">
+  <div class="stat"><div class="num" id="statFarmers">14,820</div><p>Registered Farmers</p></div>
+  <div class="stat" style="border-top:3px solid #bd4a1b"><div class="num" id="statPending" style="color:#bd4a1b">18</div><p>Pending KYC Approvals</p></div>
+  <div class="stat"><div class="num" id="statTonnage">48,250 T</div><p>Total Procured (Tonnes)</p></div>
+  <div class="stat"><div class="num" id="statDisbursed" style="color:#2f7d32">₹109.8 Cr</div><p>Direct MSP Disbursed</p></div>
+</div>
+
+<div class="grid" style="margin-top:28px">
+  <div class="card">
+    <div class="icon">📋</div>
+    <h3>Farmer KYC Verification</h3>
+    <p>Review uploaded land revenue documents (Khasra/Khatauni), verify Aadhaar identity, and issue unique Farmer ID (FID).</p>
+    <a href="admin-approvals.html" class="btn" style="margin-top:14px;display:inline-block">Open KYC Approval Queue &gt;</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🏛️</div>
+    <h3>Mandi & Crop Masters</h3>
+    <p>Configure national procurement hubs, GPS geo-fence radiuses, weighbridge capacities, seasonal MSP price rates, and daily quotas.</p>
+    <a href="admin-masters.html" class="btn secondary" style="margin-top:14px;display:inline-block">Configure Master Tables &gt;</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">👮</div>
+    <h3>Officer Management</h3>
+    <p>Provision procurement officers, assign mandi center supervisory permissions, and manage biometric/digital signature keys.</p>
+    <a href="admin-officers.html" class="btn secondary" style="margin-top:14px;display:inline-block">Manage Officers &gt;</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">🔍</div>
+    <h3>Security & Audit Logs</h3>
+    <p>Immutable log of every slot booked, weighbridge measurement, quality certificate issued, and DBT transaction disbursement.</p>
+    <a href="admin-audit.html" class="btn secondary" style="margin-top:14px;display:inline-block">View System Audit Trail &gt;</a>
+  </div>
+
+  <div class="card">
+    <div class="icon">⚡</div>
+    <h3>Smart Decision Engine Rules</h3>
+    <p>Configure automated congestion threshold (default: 85%), dynamic vehicle service times, and nearby mandi redirection radius (default: 35km).</p>
+    <button class="btn secondary" style="margin-top:14px" onclick="configureAIEngine()">Engine Parameters</button>
+  </div>
+
+  <div class="card">
+    <div class="icon">💳</div>
+    <h3>PFMS / NPCI DBT Gateway</h3>
+    <p>Direct bank integration status with Public Financial Management System. Real-time Aadhaar Payment Bridge (APB) reconciliation.</p>
+    <button class="btn secondary" style="margin-top:14px" onclick="checkDbtGatewayStatus()">Check Gateway Health</button>
+  </div>
+</div>
+
+<div class="panel" style="margin-top:28px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+    <h2 style="margin:0">Recent System Events & Transactions</h2>
+    <span style="font-size:12px;color:var(--muted)">Auto-refreshed via Backend Telemetry</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Event Category</th>
+          <th>Center / Entity</th>
+          <th>Details</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Just now</td><td>DBT Disbursal</td><td>Karnal Hub</td><td>Direct transfer of ₹1,09,200 (UTR: UTR987423984) settled</td><td><span class="status-normal">SUCCESS</span></td></tr>
+        <tr><td>2 min ago</td><td>Quality Inspection</td><td>Panipat Hub</td><td>Grade A Wheat verified (11.4% moisture) for Token PNT-0087</td><td><span class="status-normal">VERIFIED</span></td></tr>
+        <tr><td>6 min ago</td><td>Slot Redirection</td><td>Karnal → Panipat</td><td>20 slots automatically redirected by Smart Decision Engine</td><td><span class="status-high">CONGESTION SHIFT</span></td></tr>
+        <tr><td>12 min ago</td><td>Farmer Registration</td><td>Karnal, Haryana</td><td>New registration submitted (Surinder Kumar, 12.5 acres)</td><td><span class="status-high">PENDING KYC</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Central Admin</h3><a href="admin-dashboard.html">Admin Dashboard</a><a href="admin-approvals.html">Farmer KYC Queue</a><a href="admin-masters.html">Mandi Masters</a></div><div class="footer-col"><h3>Operations</h3><a href="admin-officers.html">Officer Accounts</a><a href="admin-audit.html">Audit Trail</a><a href="gov-dashboard.html">Mandi Portal</a></div><div class="footer-col"><h3>Support</h3><a href="#">NIC Help Desk</a><a href="#">Security Policies</a><a href="#">Compliance</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script><script src="js/api-client.js"></script><script>
+async function loadAdminStats() {
+  try {
+    const res = await ApniBaariAPI.request('/admin/stats');
+    if (res) {
+      if (res.total_farmers) document.getElementById('statFarmers').innerText = res.total_farmers.toLocaleString('en-IN');
+      if (res.pending_kyc !== undefined) document.getElementById('statPending').innerText = res.pending_kyc;
+      if (res.total_tonnage) document.getElementById('statTonnage').innerText = res.total_tonnage.toLocaleString('en-IN') + ' T';
+      if (res.total_disbursed_crores) document.getElementById('statDisbursed').innerText = '₹' + res.total_disbursed_crores + ' Cr';
+    }
+  } catch (err) {
+    console.log('Admin stats fetch fallback:', err);
+  }
+}
+
+function configureAIEngine() {
+  openModal('Smart Decision Engine Parameters', `
+    <div style="line-height:1.8;font-size:14px">
+      <div class="form-grid">
+        <div class="field"><label>Congestion Alert Threshold (%)</label><input type="number" value="85"></div>
+        <div class="field"><label>Redirection Search Radius (km)</label><input type="number" value="35"></div>
+        <div class="field"><label>Tractor Service Baseline (mins)</label><input type="number" value="18"></div>
+        <div class="field"><label>Truck Service Baseline (mins)</label><input type="number" value="28"></div>
+      </div>
+      <button class="btn" style="margin-top:16px" onclick="closeModal();ApniBaariAPI.showToast('AI Engine parameters updated','success')">Save Engine Config</button>
+    </div>
+  `);
+}
+
+function checkDbtGatewayStatus() {
+  openModal('PFMS / NPCI Direct Benefit Gateway', `
+    <div style="line-height:1.8;font-size:14px">
+      <p style="color:#2f7d32;font-weight:700">● PFMS Production Gateway: ONLINE (Ping: 42ms)</p>
+      <p style="color:#2f7d32;font-weight:700">● NPCI Aadhaar Payment Bridge: ACTIVE (Settlement SLA: &lt;4 hours)</p>
+      <p><strong>Batch Queue:</strong> 0 pending transactions</p>
+      <p><strong>Today's Success Rate:</strong> 100% (No rejected transfers)</p>
+    </div>
+  `);
+}
+
+function adminLogout() {
+  ApniBaariAPI.clearAuth();
+  ApniBaariAPI.showToast('Signed out of Administrator Console', 'info');
+  setTimeout(() => window.location.href = 'admin-login.html', 700);
+}
+
+document.addEventListener('DOMContentLoaded', loadAdminStats);
+</script></body></html>

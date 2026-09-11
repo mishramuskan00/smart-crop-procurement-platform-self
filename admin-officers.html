@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Officer Management | Central Admin Portal</title><link rel="stylesheet" href="gov-style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head><body><header>
+<div class="utility"><div class="container utility-inner"><div><strong>भारत सरकार</strong> | Government of India - Central Administration</div><div class="utility-right"><a href="#">स्क्रीन रीडर</a><a href="#">A-</a><a href="#">A</a><a href="#">A+</a><a href="#">हिंदी / English</a><span style="background:#bd4a1b;padding:2px 8px;border-radius:4px;font-weight:700">SUPER ADMIN</span></div></div></div>
+<div class="branding"><div class="container branding-inner"><a href="admin-dashboard.html"><img class="logo" src="assets/gov-logo.png" alt="कृषि भारत लोगो"></a><div class="brand-divider"></div><div class="brand-copy"><div class="tagline">हर किसान की बारी, सही समय की जानकारी</div><div class="department">केंद्रीय प्रशासनिक नियंत्रण कक्ष (Central Admin Portal)</div><div class="department"><span>Ministry of Consumer Affairs, Food and Public Distribution</span></div></div><div class="search-box"><input id="globalSearch" type="search" placeholder="Search Officers" aria-label="Search"><button onclick="searchPage()" aria-label="Search">⌕</button></div></div></div>
+<nav class="navbar"><div class="container nav-inner"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="nav-links"><a href="admin-dashboard.html" class="">Admin Dashboard</a><a href="admin-approvals.html" class="">Farmer KYC Queue</a><a href="admin-masters.html" class="">Mandi & MSP Masters</a><a href="admin-officers.html" class="active">Officer Accounts</a><a href="admin-audit.html" class="">Audit Trail</a><a href="gov-dashboard.html" class="">Officer Portal &gt;</a><a href="#" onclick="adminLogout()" style="color:#bd4a1b">Sign Out</a></div></div>
+</nav></header><section class="page-hero"><div class="container"><h1>Procurement Officers & Mandi In-Charge Management</h1><div class="breadcrumb">होम / Central Admin Portal / Officer Accounts</div></div></section><main class="content"><div class="container">
+
+<div class="two-col">
+  <div class="panel">
+    <h2>Provision New Procurement Officer</h2>
+    <div class="form-grid">
+      <div class="field"><label>Full Name</label><input id="newOffName" placeholder="e.g. Ramesh Chandra"></div>
+      <div class="field"><label>Mobile Number (For OTP Access)</label><input id="newOffPhone" placeholder="e.g. 9812345678" maxlength="10"></div>
+      <div class="field"><label>Official Designation</label><select id="newOffRole"><option value="DFSC">District Food & Supplies Controller (DFSC)</option><option value="MANDI_SUPERVISOR">Mandi In-Charge / Supervisor</option><option value="QUALITY_INSPECTOR">AGMARK Quality Inspector</option><option value="WEIGHBRIDGE_OP">Weighbridge Operator</option></select></div>
+      <div class="field"><label>Assigned Mandi Center</label><select id="newOffCenter"><option value="CTR-KRN">Karnal Procurement Hub</option><option value="CTR-PNT">Panipat Hub</option><option value="CTR-SNP">Sonipat Center</option><option value="CTR-RTK">Rohtak Center</option><option value="CTR-KHN">Khanna Mandi</option><option value="CTR-BPL">Bhopal Krishi Upaj</option></select></div>
+    </div>
+    <button class="btn green" style="margin-top:18px" onclick="provisionOfficer()">+ Create Officer Account & Grant Mandi Access</button>
+  </div>
+
+  <div class="panel">
+    <h2>Active Procurement Officers</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Officer Name</th><th>Designation</th><th>Center</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Shri A. Sharma</strong><br><small style="color:var(--muted)">9876543210</small></td><td>District In-Charge</td><td>Karnal Hub</td><td><span class="status-normal">ACTIVE</span></td></tr>
+          <tr><td><strong>Smt. Sunita Devi</strong><br><small style="color:var(--muted)">9812345671</small></td><td>Quality Inspector</td><td>Karnal Hub</td><td><span class="status-normal">ACTIVE</span></td></tr>
+          <tr><td><strong>Shri Baljit Singh</strong><br><small style="color:var(--muted)">9876543212</small></td><td>Mandi Supervisor</td><td>Panipat Hub</td><td><span class="status-normal">ACTIVE</span></td></tr>
+          <tr><td><strong>Shri Kuldeep Rao</strong><br><small style="color:var(--muted)">9876543214</small></td><td>Weighbridge Operator</td><td>Sonipat Center</td><td><span class="status-normal">ACTIVE</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Central Admin</h3><a href="admin-dashboard.html">Admin Dashboard</a><a href="admin-approvals.html">Farmer KYC Queue</a><a href="admin-masters.html">Mandi Masters</a></div><div class="footer-col"><h3>Operations</h3><a href="admin-officers.html">Officer Accounts</a><a href="admin-audit.html">Audit Trail</a><a href="gov-dashboard.html">Mandi Portal</a></div><div class="footer-col"><h3>Support</h3><a href="#">NIC Help Desk</a><a href="#">Security Policies</a><a href="#">Compliance</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><script src="gov-script.js"></script><script src="js/api-client.js"></script><script>
+function provisionOfficer() {
+  const name = document.getElementById('newOffName')?.value.trim();
+  const phone = document.getElementById('newOffPhone')?.value.trim();
+  const role = document.getElementById('newOffRole')?.value;
+  const center = document.getElementById('newOffCenter')?.value;
+
+  if (!name || !phone || phone.length !== 10) {
+    ApniBaariAPI.showToast('Please enter a valid officer name and 10-digit mobile number', 'error');
+    return;
+  }
+
+  ApniBaariAPI.showToast(`Officer account provisioned for ${name} (${phone})!`, 'success');
+  document.getElementById('newOffName').value = '';
+  document.getElementById('newOffPhone').value = '';
+}
+
+function adminLogout() {
+  ApniBaariAPI.clearAuth();
+  ApniBaariAPI.showToast('Signed out of Administrator Console', 'info');
+  setTimeout(() => window.location.href = 'admin-login.html', 700);
+}
+</script></body></html>

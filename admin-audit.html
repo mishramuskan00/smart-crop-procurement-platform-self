@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>System Audit Trail | Central Admin Portal</title><link rel="stylesheet" href="gov-style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head><body><header>
+<div class="utility"><div class="container utility-inner"><div><strong>भारत सरकार</strong> | Government of India - Central Administration</div><div class="utility-right"><a href="#">स्क्रीन रीडर</a><a href="#">A-</a><a href="#">A</a><a href="#">A+</a><a href="#">हिंदी / English</a><span style="background:#bd4a1b;padding:2px 8px;border-radius:4px;font-weight:700">SUPER ADMIN</span></div></div></div>
+<div class="branding"><div class="container branding-inner"><a href="admin-dashboard.html"><img class="logo" src="assets/gov-logo.png" alt="कृषि भारत लोगो"></a><div class="brand-divider"></div><div class="brand-copy"><div class="tagline">हर किसान की बारी, सही समय की जानकारी</div><div class="department">केंद्रीय प्रशासनिक नियंत्रण कक्ष (Central Admin Portal)</div><div class="department"><span>Ministry of Consumer Affairs, Food and Public Distribution</span></div></div><div class="search-box"><input id="globalSearch" type="search" placeholder="Search Audit Logs" aria-label="Search"><button onclick="searchPage()" aria-label="Search">⌕</button></div></div></div>
+<nav class="navbar"><div class="container nav-inner"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="nav-links"><a href="admin-dashboard.html" class="">Admin Dashboard</a><a href="admin-approvals.html" class="">Farmer KYC Queue</a><a href="admin-masters.html" class="">Mandi & MSP Masters</a><a href="admin-officers.html" class="">Officer Accounts</a><a href="admin-audit.html" class="active">Audit Trail</a><a href="gov-dashboard.html" class="">Officer Portal &gt;</a><a href="#" onclick="adminLogout()" style="color:#bd4a1b">Sign Out</a></div></div>
+</nav></header><section class="page-hero"><div class="container"><h1>Immutable Procurement & Financial Audit Trail</h1><div class="breadcrumb">होम / Central Admin Portal / Security & Audits</div></div></section><main class="content"><div class="container">
+
+<div class="panel">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+    <div>
+      <h2 style="margin:0;color:var(--navy)">Cryptographic Transaction Audit Log</h2>
+      <p style="margin:4px 0 0;color:var(--muted);font-size:14px">Tamper-evident logs of slot reservations, physical mandi weighments, and PFMS bank transactions.</p>
+    </div>
+    <button class="btn secondary" onclick="downloadAuditLog()" style="padding:6px 14px">📥 Export Audit Log (CSV)</button>
+  </div>
+
+  <div class="filter-row">
+    <input id="auditSearch" placeholder="Search by Token, Farmer ID, IP, or Event..." onkeyup="filterAuditRows()">
+    <select id="auditEventFilter" onchange="filterAuditRows()">
+      <option value="ALL">All Event Types</option>
+      <option value="DBT_PAYMENT">DBT Bank Disbursal</option>
+      <option value="J_FORM">J-Form Issuance</option>
+      <option value="WEIGHMENT">Weighbridge Scale Slip</option>
+      <option value="QUALITY">AI Grain Quality</option>
+      <option value="SLOT_BOOKING">Slot Reservation</option>
+      <option value="KYC">KYC Approval</option>
+      <option value="REDIRECTION">Congestion Redirection</option>
+    </select>
+  </div>
+
+  <div class="table-wrap">
+    <table id="auditTable">
+      <thead>
+        <tr>
+          <th>Timestamp (IST)</th>
+          <th>Event Action</th>
+          <th>User / Operator</th>
+          <th>Entity / Token ID</th>
+          <th>Transaction Details</th>
+          <th>IP Address</th>
+          <th>Verification Hash</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-cat="DBT_PAYMENT"><td>2026-09-06 14:12:08</td><td><span class="status-normal">DBT_PAYMENT</span></td><td>PFMS Gateway (Auto)</td><td>AB-2026-9874</td><td>Disbursed ₹1,09,200 (UTR987423984) to Ramesh Kumar</td><td>10.0.4.12</td><td><code style="font-size:11px">a7f29c018...</code></td></tr>
+        <tr data-cat="J_FORM"><td>2026-09-06 13:58:24</td><td><span class="status-normal">J_FORM</span></td><td>Karnal Mandi Officer</td><td>JF-2026-0042</td><td>Issued official sale record for 48.00 qtl Wheat @ ₹2275</td><td>192.168.1.45</td><td><code style="font-size:11px">e81c03b41...</code></td></tr>
+        <tr data-cat="WEIGHMENT"><td>2026-09-06 13:42:15</td><td><span class="status-normal">WEIGHMENT</span></td><td>Operator WB-01</td><td>AB-2026-9874</td><td>Gross: 7,450 kg, Tare: 2,650 kg, Net: 4,800 kg</td><td>192.168.1.88</td><td><code style="font-size:11px">6b4e9f1a2...</code></td></tr>
+        <tr data-cat="QUALITY"><td>2026-09-06 13:30:19</td><td><span class="status-normal">QUALITY</span></td><td>AI Vision Cam #2</td><td>AB-2026-9874</td><td>Grade A Wheat certified (11.4% moisture, 0.45% FM)</td><td>192.168.1.92</td><td><code style="font-size:11px">4d2f8e9c7...</code></td></tr>
+        <tr data-cat="REDIRECTION"><td>2026-09-06 12:45:00</td><td><span class="status-high">REDIRECTION</span></td><td>Smart Decision Engine</td><td>BATCH-RED-01</td><td>Shifted 20 slots from Karnal Hub to Panipat Hub</td><td>127.0.0.1</td><td><code style="font-size:11px">9a0e1c4f8...</code></td></tr>
+        <tr data-cat="KYC"><td>2026-09-06 11:15:32</td><td><span class="status-normal">KYC</span></td><td>Central Admin (Super)</td><td>FID-2026-0042</td><td>Approved land revenue dossier & Aadhaar for Ramesh Kumar</td><td>10.0.1.15</td><td><code style="font-size:11px">1f5c8d2e3...</code></td></tr>
+        <tr data-cat="SLOT_BOOKING"><td>2026-09-06 09:20:11</td><td><span class="status-normal">SLOT_BOOKING</span></td><td>Farmer App (9876543210)</td><td>AB-2026-9874</td><td>Booked Afternoon Slot (13:00 - 14:00) at Karnal Hub</td><td>157.34.12.8</td><td><code style="font-size:11px">7c8b9a1d2...</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Central Admin</h3><a href="admin-dashboard.html">Admin Dashboard</a><a href="admin-approvals.html">Farmer KYC Queue</a><a href="admin-masters.html">Mandi Masters</a></div><div class="footer-col"><h3>Operations</h3><a href="admin-officers.html">Officer Accounts</a><a href="admin-audit.html">Audit Trail</a><a href="gov-dashboard.html">Mandi Portal</a></div><div class="footer-col"><h3>Support</h3><a href="#">NIC Help Desk</a><a href="#">Security Policies</a><a href="#">Compliance</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><script src="gov-script.js"></script><script src="js/api-client.js"></script><script>
+function filterAuditRows() {
+  const q = (document.getElementById('auditSearch')?.value || '').toLowerCase();
+  const cat = document.getElementById('auditEventFilter')?.value || 'ALL';
+
+  document.querySelectorAll('#auditTable tbody tr').forEach(r => {
+    const rowCat = r.getAttribute('data-cat') || '';
+    const text = r.innerText.toLowerCase();
+    const okQ = !q || text.includes(q);
+    const okCat = (cat === 'ALL') || (rowCat === cat);
+    r.style.display = okQ && okCat ? '' : 'none';
+  });
+}
+
+function downloadAuditLog() {
+  const csvContent = "Timestamp,Action,Operator,Entity,Details,IP,Hash\n" +
+    "2026-09-06 14:12:08,DBT_PAYMENT,PFMS,AB-2026-9874,Disbursed 109200 INR,10.0.4.12,a7f29c018\n" +
+    "2026-09-06 13:58:24,J_FORM,Karnal Officer,JF-2026-0042,48 qtl Wheat,192.168.1.45,e81c03b41\n" +
+    "2026-09-06 13:42:15,WEIGHMENT,WB-01,AB-2026-9874,Net 4800 kg,192.168.1.88,6b4e9f1a2\n";
+  const blob = new Blob([csvContent], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `ApniBaari_AuditTrail_${Date.now()}.csv`;
+  a.click();
+  ApniBaariAPI.showToast('Audit log exported to CSV', 'success');
+}
+
+function adminLogout() {
+  ApniBaariAPI.clearAuth();
+  ApniBaariAPI.showToast('Signed out of Administrator Console', 'info');
+  setTimeout(() => window.location.href = 'admin-login.html', 700);
+}
+</script></body></html>

@@ -9,18 +9,223 @@
 <div class="utility"><div class="container utility-inner"><div><strong>भारत सरकार</strong> | Government of India</div><div class="utility-right"><a href="#">स्क्रीन रीडर</a><a href="#">A-</a><a href="#">A</a><a href="#">A+</a><a href="#">हिंदी / English</a></div></div></div>
 <div class="branding"><div class="container branding-inner"><a href="gov-dashboard.html"><img class="logo" src="assets/gov-logo.png" alt="कृषि भारत लोगो"></a><div class="brand-divider"></div><div class="brand-copy"><div class="tagline">हर किसान की बारी, सही समय की जानकारी</div><div class="department">किसान सूचना एवं सेवा पोर्टल</div><div class="department"><span>Ministry of Consumer Affairs, Food and Public Distribution</span></div></div><div class="search-box"><input id="globalSearch" type="search" placeholder="Search Services" aria-label="Search Services"><button onclick="searchPage()" aria-label="Search">⌕</button></div></div></div>
 <nav class="navbar"><div class="container nav-inner"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button><div class="nav-links"><a href="gov-dashboard.html" class="">Dashboard</a><a href="gov-live-centers.html" class="">Live Centers</a><a href="gov-queue-management.html" class="active">Queue Management</a><a href="gov-slot-management.html" class="">Slot Management</a><a href="gov-procurement.html" class="">Procurement</a><a href="gov-analytics.html" class="">Analytics</a><a href="gov-reports.html" class="">Reports</a><a href="gov-notifications.html" class="">Notifications</a><a href="gov-settings.html" class="">Settings</a></div></div>
-<<<<<<< HEAD
-</nav>
-<div class="price-ticker" id="latest-price-bar" role="region" aria-label="Latest MSP prices"><div class="price-ticker-track"><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong><strong>अपनी BAARI • किसान मूल्य सूचना</strong><span class="price-label">LATEST MSP / नवीनतम MSP</span><strong>🌾 गेहूँ ₹2,425 / क्विंटल</strong><strong>🌾 धान ₹2,320 / क्विंटल</strong><strong>🌾 सरसों ₹5,950 / क्विंटल</strong><strong>🌾 चना ₹5,650 / क्विंटल</strong></div></div>
-</header><section class="page-hero"><div class="container"><h1>Queue Management</h1><div class="breadcrumb">होम / Government Portal / Queue Management</div></div></section><main class="content"><div class="container"><div class="panel"><h2>Live Queue Monitoring</h2><div class="filter-row"><input placeholder="Search center or token"><select><option>All Status</option><option>Normal</option><option>High Load</option><option>Overloaded</option></select></div><div class="table-wrap"><table><thead><tr><th>Center</th><th>Current Token</th><th>Farmers Waiting</th><th>Estimated Wait</th><th>Processing Rate</th><th>Utilization</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>Karnal</td><td>KRN-0191</td><td>87</td><td>1h 25m</td><td>19/hr</td><td>92%</td><td class="status-red">Overloaded</td><td><button class="btn secondary" onclick="openModal('Queue Details','Karnal queue is above the prototype congestion threshold.')">View</button></td></tr><tr><td>Panipat</td><td>PNT-0087</td><td>54</td><td>48 min</td><td>28/hr</td><td>74%</td><td class="status-high">High Load</td><td><button class="btn secondary">View</button></td></tr><tr><td>Sonipat</td><td>SNP-0042</td><td>31</td><td>27 min</td><td>31/hr</td><td>52%</td><td class="status-normal">Normal</td><td><button class="btn secondary">View</button></td></tr></tbody></table></div></div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script><script src="js/whatsapp-bot.js"></script>
-
-<button class="wa-fab" id="waFab" aria-label="Open Apni BAARI WhatsApp Help" aria-expanded="false" title="अपनी BAARI WhatsApp Help"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></button>
-<div class="wa-window" id="waWindow" role="dialog" aria-label="अपनी BAARI WhatsApp Help">
-  <div class="wa-head"><div class="wa-head-icon"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></div><div class="wa-head-title">अपनी BAARI Help Bot<div class="wa-sub">WhatsApp-style • Click an option, no typing required</div></div><button class="wa-close" id="waClose" aria-label="Close">×</button></div>
-  <div class="wa-body" id="waBody"><div class="wa-bubble bot">नमस्ते! 👋 अपनी BAARI में आपका स्वागत है। नीचे कोई भी विकल्प चुनें — आपको कुछ टाइप करने की जरूरत नहीं है।</div></div>
-  <div class="wa-options"><button class="wa-option" onclick="chooseWhatsApp('status')">🎫 टोकन स्थिति</button><button class="wa-option" onclick="chooseWhatsApp('booking')">📅 टोकन बुक करें</button><button class="wa-option" onclick="chooseWhatsApp('msp')">💰 आज की MSP</button><button class="wa-option" onclick="chooseWhatsApp('weather')">🌧️ मौसम अलर्ट</button><button class="wa-option" onclick="chooseWhatsApp('payment')">🏦 भुगतान स्थिति</button><button class="wa-help" id="waHelp">❓ मदद / Help</button></div>
+</nav></header><section class="page-hero"><div class="container"><h1>Queue Management (कतार प्रबंधन)</h1><div class="breadcrumb">होम / Government Portal / Queue Management</div></div></section><main class="content"><div class="container">
+<div class="panel" style="margin-bottom:24px">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <div>
+      <h2 style="margin:0;color:var(--navy)">Active Mandi Dispatch & Queue Controller</h2>
+      <p style="margin:4px 0 0;color:var(--muted);font-size:14px">Real-time gate arrivals, electronic calling, and stage transit coordination.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+      <label style="font-weight:700;color:var(--navy)">Select Center:</label>
+      <select id="centerSelect" onchange="loadQueueData()" style="padding:8px 14px;border-radius:6px;border:1px solid #c9cad8;font-weight:600">
+        <option value="CTR-KRN">Karnal Procurement Hub (CTR-KRN)</option>
+        <option value="CTR-PNT">Panipat Hub (CTR-PNT)</option>
+        <option value="CTR-SNP">Sonipat Center (CTR-SNP)</option>
+        <option value="CTR-RTK">Rohtak Center (CTR-RTK)</option>
+        <option value="CTR-KHN">Khanna Mandi (CTR-KHN)</option>
+        <option value="CTR-BPL">Bhopal Krishi Upaj (CTR-BPL)</option>
+      </select>
+      <button class="btn green" onclick="callNextFarmer()" style="padding:9px 18px">📢 CALL NEXT FARMER</button>
+      <button class="btn secondary" onclick="openGateVerifyModal()" style="padding:9px 18px">📷 VERIFY GATE PASS</button>
+    </div>
+  </div>
 </div>
-</body></html>
-=======
-</nav></header><section class="page-hero"><div class="container"><h1>Queue Management</h1><div class="breadcrumb">होम / Government Portal / Queue Management</div></div></section><main class="content"><div class="container"><div class="panel"><h2>Live Queue Monitoring</h2><div class="filter-row"><input placeholder="Search center or token"><select><option>All Status</option><option>Normal</option><option>High Load</option><option>Overloaded</option></select></div><div class="table-wrap"><table><thead><tr><th>Center</th><th>Current Token</th><th>Farmers Waiting</th><th>Estimated Wait</th><th>Processing Rate</th><th>Utilization</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>Karnal</td><td>KRN-0191</td><td>87</td><td>1h 25m</td><td>19/hr</td><td>92%</td><td class="status-red">Overloaded</td><td><button class="btn secondary" onclick="openModal('Queue Details','Karnal queue is above the prototype congestion threshold.')">View</button></td></tr><tr><td>Panipat</td><td>PNT-0087</td><td>54</td><td>48 min</td><td>28/hr</td><td>74%</td><td class="status-high">High Load</td><td><button class="btn secondary">View</button></td></tr><tr><td>Sonipat</td><td>SNP-0042</td><td>31</td><td>27 min</td><td>31/hr</td><td>52%</td><td class="status-normal">Normal</td><td><button class="btn secondary">View</button></td></tr></tbody></table></div></div></div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script></body></html>
->>>>>>> 1c1333f0e82d5f6d609f4c7bf80c342c7faa9e81
+
+<div class="panel">
+  <div class="filter-row">
+    <input id="queueSearch" placeholder="Search by Token ID, Farmer Name, Crop, or Vehicle..." onkeyup="filterQueue()">
+    <select id="stageFilter" onchange="filterQueue()">
+      <option value="ALL">All Stages</option>
+      <option value="WAITING_GATE">Waiting at Gate</option>
+      <option value="GATE_ARRIVED">Gate Arrived / Verified</option>
+      <option value="WEIGHMENT_GROSS">Gross Weighment</option>
+      <option value="QUALITY_CHECK">Quality Inspection</option>
+      <option value="UNLOADING_BAY">Unloading Bay</option>
+      <option value="WEIGHMENT_TARE">Tare Weighment</option>
+      <option value="COMPLETED">Completed</option>
+    </select>
+    <button class="btn secondary" onclick="loadQueueData()" style="padding:8px 16px">↻ Refresh</button>
+  </div>
+  <div class="table-wrap">
+    <table id="queueTable">
+      <thead>
+        <tr>
+          <th>Token ID</th>
+          <th>Farmer Name</th>
+          <th>Crop</th>
+          <th>Vehicle</th>
+          <th>Priority</th>
+          <th>Queue Pos</th>
+          <th>Est. Wait</th>
+          <th>Current Stage</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="queueTableBody">
+        <tr><td colspan="9" style="text-align:center;padding:24px;color:var(--muted)">Loading active queue data...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div></main><footer class="footer"><div class="footer-top"><div class="container"><div class="footer-brand"><img src="assets/gov-logo.png" alt="कृषि भारत लोगो"><div><strong>किसान सूचना एवं सेवा पोर्टल</strong><br><span style="color:#666">हर किसान की बारी, सही समय की जानकारी</span><br><span style="color:#666">Ministry of Consumer Affairs, Food and Public Distribution</span></div><div class="social"><a href="#">f</a><a href="#">▶</a><a href="#">◎</a><a href="#">in</a><a href="#">𝕏</a></div></div><div class="footer-grid"><div class="footer-col"><h3>Government Portal</h3><a href="gov-dashboard.html">Dashboard</a><a href="gov-live-centers.html">Live Centers</a><a href="gov-procurement.html">Procurement</a></div><div class="footer-col"><h3>Operations</h3><a href="gov-queue-management.html">Queue Management</a><a href="gov-slot-management.html">Slot Management</a><a href="gov-notifications.html">Notifications</a></div><div class="footer-col"><h3>Insights</h3><a href="gov-analytics.html">Analytics</a><a href="gov-reports.html">Reports</a><a href="gov-settings.html">Settings</a></div><div class="footer-col"><h3>Support</h3><a href="#">Help Desk</a><a href="#">Accessibility</a><a href="#">Website Policies</a></div></div></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><div>© <span data-year></span> किसान सूचना एवं सेवा पोर्टल. सर्वाधिकार सुरक्षित.</div><div>Accessibility &nbsp; | &nbsp; Privacy &nbsp; | &nbsp; Terms</div></div></div></footer><div id="modalBackdrop" class="modal-backdrop" onclick="if(event.target===this)closeModal()"><div class="modal"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div><button class="btn" onclick="closeModal()">Close</button></div></div><script src="gov-script.js"></script><script src="js/api-client.js"></script><script>
+let currentQueueData = [];
+
+async function loadQueueData() {
+  const centerId = document.getElementById('centerSelect')?.value || 'CTR-KRN';
+  try {
+    const res = await ApniBaariAPI.getQueueStatus(centerId);
+    currentQueueData = res.active_queue || [];
+    renderQueueTable(currentQueueData);
+  } catch (err) {
+    console.error('Queue load failed:', err);
+    document.getElementById('queueTableBody').innerHTML = `<tr><td colspan="9" style="text-align:center;padding:20px;color:#bd4a1b">Unable to connect to Queue API. Please ensure backend is running.</td></tr>`;
+  }
+}
+
+function renderQueueTable(list) {
+  const tbody = document.getElementById('queueTableBody');
+  if (!list || list.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="9" style="text-align:center;padding:24px;color:var(--muted)">No vehicles currently in queue for this center.</td></tr>`;
+    return;
+  }
+
+  const stageLabels = {
+    'WAITING_GATE': 'Waiting at Gate',
+    'GATE_ARRIVED': 'Gate Checked-In',
+    'WEIGHMENT_GROSS': 'Gross Weighment',
+    'QUALITY_CHECK': 'Quality Testing',
+    'UNLOADING_BAY': 'Unloading at Bay',
+    'WEIGHMENT_TARE': 'Tare Weighment',
+    'COMPLETED': 'Procurement Done'
+  };
+
+  tbody.innerHTML = list.map(item => {
+    let statusClass = 'status-normal';
+    if (item.status === 'GATE_ARRIVED' || item.status === 'WAITING_GATE') statusClass = 'status-high';
+    else if (item.status === 'WEIGHMENT_GROSS' || item.status === 'QUALITY_CHECK') statusClass = 'status-red';
+
+    return `<tr>
+      <td><strong style="color:var(--navy);font-size:15px">${item.token_number}</strong></td>
+      <td><strong>${item.farmer_name || 'Farmer'}</strong><br><small style="color:var(--muted)">${item.farmer_phone || ''}</small></td>
+      <td>${item.crop_name || 'Wheat'}</td>
+      <td><span style="font-size:13px">${item.vehicle_type}</span><br><small style="color:var(--muted)">${item.vehicle_number}</small></td>
+      <td>${item.is_priority ? '<span style="color:#bd4a1b;font-weight:700">★ High Priority</span>' : 'Standard'}</td>
+      <td style="font-weight:700;text-align:center">#${item.queue_position}</td>
+      <td>${item.estimated_wait_min} min</td>
+      <td><span class="${statusClass}">${stageLabels[item.status] || item.status}</span></td>
+      <td>
+        <button class="btn secondary" style="padding:5px 12px;font-size:12px" onclick="viewQueueItem('${item.token_number}')">Inspect</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function filterQueue() {
+  const q = (document.getElementById('queueSearch')?.value || '').toLowerCase();
+  const stg = (document.getElementById('stageFilter')?.value || 'ALL');
+
+  const filtered = currentQueueData.filter(item => {
+    const text = `${item.token_number} ${item.farmer_name} ${item.crop_name} ${item.vehicle_number} ${item.vehicle_type}`.toLowerCase();
+    const matchesQuery = !q || text.includes(q);
+    const matchesStage = (stg === 'ALL') || (item.status === stg);
+    return matchesQuery && matchesStage;
+  });
+
+  renderQueueTable(filtered);
+}
+
+async function callNextFarmer() {
+  const centerId = document.getElementById('centerSelect')?.value || 'CTR-KRN';
+  try {
+    const res = await ApniBaariAPI.callNextFarmer(centerId, 1);
+    if (res.status === 'EMPTY_QUEUE') {
+      ApniBaariAPI.showToast(res.message, 'info');
+      return;
+    }
+
+    const b = res.booking;
+    const bodyHtml = `
+      <div style="line-height:1.8;font-size:15px">
+        <div style="background:#f0fff4;border:1px solid #2f7d32;padding:16px;border-radius:8px;margin-bottom:16px">
+          <h3 style="margin:0 0 6px;color:#2f7d32">📢 Farmer Called Successfully!</h3>
+          <p style="margin:0;color:var(--navy)">SMS & Display token broadcasted to weighbridge operator.</p>
+        </div>
+        <table style="width:100%;border-collapse:collapse">
+          <tr><td style="padding:6px;font-weight:700;color:var(--muted)">Token Number:</td><td><strong style="font-size:18px;color:var(--navy)">${b.token_number}</strong></td></tr>
+          <tr><td style="padding:6px;font-weight:700;color:var(--muted)">Farmer Name:</td><td><strong>${b.farmer_name}</strong></td></tr>
+          <tr><td style="padding:6px;font-weight:700;color:var(--muted)">Mobile Number:</td><td>${b.farmer_phone}</td></tr>
+          <tr><td style="padding:6px;font-weight:700;color:var(--muted)">Vehicle:</td><td>${b.vehicle_type} (${b.vehicle_number})</td></tr>
+          <tr><td style="padding:6px;font-weight:700;color:var(--muted)">Assigned Bay / Scale:</td><td><span style="background:#eef0fb;padding:4px 10px;border-radius:4px;font-weight:700;color:var(--indigo)">Weighbridge Scale #1</span></td></tr>
+        </table>
+      </div>
+    `;
+    openModal('Next Farmer Called', bodyHtml);
+    loadQueueData();
+  } catch (err) {
+    ApniBaariAPI.showToast('Error calling next farmer: ' + err.message, 'error');
+  }
+}
+
+function openGateVerifyModal() {
+  const bodyHtml = `
+    <div style="line-height:1.7">
+      <p style="color:var(--muted);margin-top:0">Scan Mandi Gate QR Pass or enter token number manually to verify physical gate arrival and grant mandi entry:</p>
+      <div class="field" style="margin-bottom:14px">
+        <label>Token Number / Pass Code</label>
+        <input id="verifyTokenInput" placeholder="e.g. AB-2026-9874 or KRN-0191" style="width:100%;padding:10px;border:1px solid #c9cad8;border-radius:6px;font-size:16px;font-weight:700">
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn green" onclick="submitGateVerification()" style="flex:1">Confirm Gate Entry (प्रवेश सत्यापित करें)</button>
+      </div>
+    </div>
+  `;
+  openModal('Verify Gate Pass (गेट प्रवेश सत्यापन)', bodyHtml);
+}
+
+async function submitGateVerification() {
+  const token = document.getElementById('verifyTokenInput')?.value.trim();
+  const centerId = document.getElementById('centerSelect')?.value || 'CTR-KRN';
+  if (!token) {
+    ApniBaariAPI.showToast('Please enter a valid Token ID', 'error');
+    return;
+  }
+
+  try {
+    const res = await ApniBaariAPI.checkInGate(token, 29.6857, 76.9905, true);
+    closeModal();
+    ApniBaariAPI.showToast(`Gate Verified! Token ${token} entered queue at position #${res.queue_position}`, 'success');
+    loadQueueData();
+  } catch (err) {
+    ApniBaariAPI.showToast('Gate Check-in error: ' + err.message, 'error');
+  }
+}
+
+function viewQueueItem(token) {
+  const item = currentQueueData.find(q => q.token_number === token);
+  if (!item) return;
+
+  const bodyHtml = `
+    <div style="line-height:1.8;font-size:14px">
+      <div style="background:#f7f7fc;padding:14px;border-radius:8px;margin-bottom:14px;border:1px solid #dedee8">
+        <strong style="font-size:16px;color:var(--navy)">Token: ${item.token_number}</strong><br>
+        <span>Farmer: <strong>${item.farmer_name}</strong> (${item.farmer_phone})</span><br>
+        <span>Crop: <strong>${item.crop_name}</strong> | Estimated Load: <strong>${item.estimated_quantity} qtl</strong></span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
+        <div style="border:1px solid #e0e0ea;padding:8px;border-radius:6px">Vehicle: <strong>${item.vehicle_type} (${item.vehicle_number})</strong></div>
+        <div style="border:1px solid #e0e0ea;padding:8px;border-radius:6px">Stage: <strong>${item.status}</strong></div>
+        <div style="border:1px solid #e0e0ea;padding:8px;border-radius:6px">Queue Pos: <strong>#${item.queue_position}</strong></div>
+        <div style="border:1px solid #e0e0ea;padding:8px;border-radius:6px">Est. Wait: <strong>${item.estimated_wait_min} min</strong></div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:16px">
+        <a href="gov-procurement.html" class="btn" style="text-align:center;flex:1">Proceed to Weighment / Quality &gt;</a>
+      </div>
+    </div>
+  `;
+  openModal(`Queue Item: ${token}`, bodyHtml);
+}
+
+document.addEventListener('DOMContentLoaded', loadQueueData);
+</script></body></html>

@@ -449,7 +449,7 @@
               <hr class="divider">
 
               <div class="register-row">
-                नए किसान हैं? <a href="#">यहाँ पंजीकरण करें</a>
+                नए किसान हैं? <a href="registration.html">यहाँ पंजीकरण करें</a>
               </div>
             </form>
           </div>
@@ -520,44 +520,7 @@
 </footer>
 
 
-<!-- OTP REDIRECT PATCH START -->
-<script>
-(function () {
-  document.addEventListener('click', function (event) {
-    const btn = event.target.closest('button, input[type="submit"], a');
-    if (!btn) return;
-
-    const label = (btn.innerText || btn.value || btn.getAttribute('aria-label') || '').trim().toLowerCase();
-    const form = btn.closest('form');
-
-    if (/(verify|otp|submit)/i.test(label) || (form && /otp/i.test(form.innerText || form.textContent || ''))) {
-      setTimeout(function () {
-        const bodyText = (document.body.innerText || '').toLowerCase();
-        const success = /otp verified|verification successful|verified successfully|login successful|successfully verified|otp is valid/.test(bodyText);
-        if (success) {
-          window.location.href = 'dashboard.html';
-        }
-      }, 100);
-    }
-  });
-})();
-</script>
-<!-- OTP REDIRECT PATCH END -->
-
-<<<<<<< HEAD
-<script src="js/whatsapp-bot.js"></script>
-
-<button class="wa-fab" id="waFab" aria-label="Open Apni BAARI WhatsApp Help" aria-expanded="false" title="अपनी BAARI WhatsApp Help"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></button>
-<div class="wa-window" id="waWindow" role="dialog" aria-label="अपनी BAARI WhatsApp Help">
-  <div class="wa-head"><div class="wa-head-icon"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.82 3 3 8.62 3 15.55c0 2.48.75 4.78 2.04 6.7L3.25 29l6.98-1.77A13.22 13.22 0 0 0 16 28.1c7.18 0 13-5.62 13-12.55S23.18 3 16 3Zm0 22.85c-2.1 0-4.04-.62-5.68-1.69l-.4-.26-4.14 1.05 1.1-3.94-.28-.42a10.2 10.2 0 0 1-1.61-5.04C4.99 10.02 9.93 5.3 16 5.3s11.01 4.72 11.01 10.25S22.07 25.85 16 25.85Zm6.36-7.72c-.34-.17-2-1-2.31-1.11-.31-.11-.54-.17-.77.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.51-2.72-1.62-1.01-.87-1.69-1.94-1.89-2.28-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.41 3.68 5.85 5.16.82.35 1.46.56 1.96.71.82.25 1.56.21 2.15.13.66-.1 2-.82 2.28-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.23-.65-.4Z"/></svg></div><div class="wa-head-title">अपनी BAARI Help Bot<div class="wa-sub">WhatsApp-style • Click an option, no typing required</div></div><button class="wa-close" id="waClose" aria-label="Close">×</button></div>
-  <div class="wa-body" id="waBody"><div class="wa-bubble bot">नमस्ते! 👋 अपनी BAARI में आपका स्वागत है। नीचे कोई भी विकल्प चुनें — आपको कुछ टाइप करने की जरूरत नहीं है।</div></div>
-  <div class="wa-options"><button class="wa-option" onclick="chooseWhatsApp('status')">🎫 टोकन स्थिति</button><button class="wa-option" onclick="chooseWhatsApp('booking')">📅 टोकन बुक करें</button><button class="wa-option" onclick="chooseWhatsApp('msp')">💰 आज की MSP</button><button class="wa-option" onclick="chooseWhatsApp('weather')">🌧️ मौसम अलर्ट</button><button class="wa-option" onclick="chooseWhatsApp('payment')">🏦 भुगतान स्थिति</button><button class="wa-help" id="waHelp">❓ मदद / Help</button></div>
-</div>
-=======
->>>>>>> 1c1333f0e82d5f6d609f4c7bf80c342c7faa9e81
-</body>
-</html>
-
+<script src="js/api-client.js"></script>
 <script>
 function toggleFarmerLogin() {
   const method = document.getElementById('login-method').value;
@@ -567,41 +530,89 @@ function toggleFarmerLogin() {
 
   if (method === 'aadhaar') {
     label.textContent = 'आधार नंबर (Aadhaar Number)';
-    input.placeholder = 'Enter 12-digit Aadhaar Number';
+    input.placeholder = 'Enter 12-digit Aadhaar Number (Demo: 9876543210)';
     input.maxLength = 12;
     help.textContent = 'OTP आपके पंजीकृत मोबाइल नंबर पर भेजा जाएगा।';
   } else if (method === 'mobile') {
     label.textContent = 'मोबाइल नंबर (Mobile Number)';
-    input.placeholder = 'Enter Registered Mobile Number';
+    input.placeholder = 'Enter Registered Mobile Number (Demo: 9876543210)';
     input.maxLength = 10;
     help.textContent = 'पंजीकृत मोबाइल नंबर पर OTP भेजा जाएगा।';
   } else {
     label.textContent = 'किसान ID (Farmer ID)';
-    input.placeholder = 'Enter Farmer ID';
+    input.placeholder = 'Enter Farmer ID (Demo: FID-HR-2026-001)';
     input.maxLength = 20;
     help.textContent = 'किसान ID से जुड़े मोबाइल नंबर पर OTP भेजा जाएगा।';
   }
 }
 
-document.getElementById('send-otp')?.addEventListener('click', function() {
-  this.textContent = 'OTP भेजा गया ✓';
-  this.disabled = true;
-  setTimeout(() => {
-    this.textContent = 'OTP फिर भेजें';
-    this.disabled = false;
-  }, 30000);
+document.getElementById('send-otp')?.addEventListener('click', async function() {
+  const idInput = document.getElementById('farmer-id').value.trim();
+  // Default to demo farmer mobile if not filled or format differs
+  let mobile = idInput.length === 10 ? idInput : "9876543210";
+  
+  const btn = this;
+  btn.disabled = true;
+  btn.textContent = 'भेजा जा रहा है...';
+  try {
+    const res = await apiCall('/api/auth/send-otp', {
+      method: 'POST',
+      body: JSON.stringify({ mobile: mobile, role: 'FARMER' })
+    });
+    showToast(res.message, 'success');
+    btn.textContent = 'OTP भेजा गया ✓';
+    // Auto-populate demo OTP for convenience
+    document.getElementById('otp').value = res.demo_otp || '123456';
+    setTimeout(() => {
+      btn.textContent = 'OTP फिर भेजें';
+      btn.disabled = false;
+    }, 30000);
+  } catch (err) {
+    showToast(err.message || 'OTP भेजने में विफल।', 'error');
+    btn.disabled = false;
+    btn.textContent = 'OTP भेजें';
+  }
 });
 
-function farmerDemoLogin(event) {
+async function farmerDemoLogin(event) {
   event.preventDefault();
+  const idVal = document.getElementById('farmer-id').value.trim();
+  const mobile = idVal.length === 10 ? idVal : "9876543210";
   const otp = document.getElementById('otp').value.trim();
-  if (otp.length !== 6) {
-    alert('कृपया 6 अंकों का OTP दर्ज करें।');
+
+  if (!otp) {
+    showToast('कृपया 6 अंकों का OTP दर्ज करें। (डेमो OTP: 123456)', 'error');
     return false;
   }
-  window.location.href = 'dashboard.html';
+
+  const submitBtn = document.querySelector('.btn-login');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'सत्यापित किया जा रहा है...';
+
+  try {
+    const res = await apiCall('/api/auth/verify-otp', {
+      method: 'POST',
+      body: JSON.stringify({
+        mobile: mobile,
+        otp: otp,
+        role: 'FARMER'
+      })
+    });
+
+    setAuthSession(res.token, res.user);
+    showToast('लॉगिन सफल! डैशबोर्ड पर भेजा जा रहा है...', 'success');
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 400);
+  } catch (err) {
+    showToast(err.message || 'लॉगिन असफल रहा। कृपया सही OTP दर्ज करें।', 'error');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'OTP सत्यापित करें और लॉगिन करें';
+  }
   return false;
 }
 
 toggleFarmerLogin();
 </script>
+</body>
+</html>
